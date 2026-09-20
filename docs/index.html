@@ -20,10 +20,10 @@
     <meta name="theme-color" content="#17756a" />
     <title>ClueWeaver | ICONIP 2026</title>
     <link rel="stylesheet" href="site.css" />
-    <link rel="stylesheet" href="insight.css?v=storybook-7" />
+    <link rel="stylesheet" href="insight.css?v=popup-2" />
     <script src="vendor/lucide.min.js" defer></script>
     <script src="site.js" defer></script>
-    <script src="insight.js?v=storybook-7" defer></script>
+    <script src="insight.js?v=popup-2" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -161,42 +161,864 @@
           <div
             class="cast-art"
             role="img"
-            aria-label="A storybook, a teal robot detective called Finder, and a coral robot scholar called Interpreter"
+            aria-label="A pop-up storybook theatre: an open storybook with paper pop-up scenes of an attic door with a brass lock, a rain cloud, Mara leaving for the harbour, Mara handing a brass key to Leon, Leon's coat pocket and Leon still holding the key at night, each with a numbered paragraph tab. Finder, a teal robot detective with a deerstalker cap and magnifier, keeps the useful tabs, drops the weather tab into a wastebasket and stitches the rest into one evidence packet, then dozes; Interpreter, a coral robot scholar with round glasses, a clipboard and a pencil, links the packet cards into the key's journey, re-checks the same packet on her checklist and the attic door opens with the answer TRUE."
           >
-            <img
-              class="cast-piece cast-book"
-              src="images/insight-storybook-cast.png"
-              width="1536"
-              height="1024"
-              alt=""
-            />
-            <img
-              class="cast-piece cast-finder"
-              src="images/insight-storybook-cast.png"
-              width="1536"
-              height="1024"
-              alt=""
-            />
-            <img
-              class="cast-piece cast-interpreter"
-              src="images/insight-storybook-cast.png"
-              width="1536"
-              height="1024"
-              alt=""
-            />
-            <span class="flying-clue flying-a">[12]</span
-            ><span class="flying-clue flying-b">[87]</span
-            ><span class="flying-clue flying-c">[203]</span>
+            <svg
+              class="pop-stage"
+              viewBox="-30 0 1060 530"
+              preserveAspectRatio="xMidYMid meet"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <defs>
+                <filter id="cw-sh" x="-20%" y="-20%" width="140%" height="150%">
+                  <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1d2b2a" flood-opacity=".17" />
+                </filter>
+                <filter id="cw-sh-sm" x="-25%" y="-25%" width="150%" height="160%">
+                  <feDropShadow dx="0" dy="2" stdDeviation="1.8" flood-color="#1d2b2a" flood-opacity=".18" />
+                </filter>
+                <filter id="cw-blur" x="-60%" y="-60%" width="220%" height="220%">
+                  <feGaussianBlur stdDeviation="7" />
+                </filter>
+                <radialGradient id="cw-wash" cx="50%" cy="58%" r="60%">
+                  <stop offset="0" stop-color="#eaf4f0" />
+                  <stop offset=".7" stop-color="#f4f9f7" stop-opacity=".7" />
+                  <stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+                </radialGradient>
+                <linearGradient id="cw-pageL" x1="0" x2="1" y1="0" y2="0">
+                  <stop offset="0" stop-color="#fffdf7" />
+                  <stop offset=".82" stop-color="#fbf5e6" />
+                  <stop offset="1" stop-color="#e9dfc6" />
+                </linearGradient>
+                <linearGradient id="cw-pageR" x1="1" x2="0" y1="0" y2="0">
+                  <stop offset="0" stop-color="#fffdf7" />
+                  <stop offset=".82" stop-color="#fbf5e6" />
+                  <stop offset="1" stop-color="#e9dfc6" />
+                </linearGradient>
+                <linearGradient id="cw-night" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0" stop-color="#173f44" />
+                  <stop offset="1" stop-color="#2a6f69" />
+                </linearGradient>
+                <radialGradient id="cw-doorglow" cx="50%" cy="55%" r="70%">
+                  <stop offset="0" stop-color="#fffbe6" />
+                  <stop offset=".6" stop-color="#ffe9a6" />
+                  <stop offset="1" stop-color="#e0b64e" />
+                </radialGradient>
+                <radialGradient id="cw-raygrad" gradientUnits="userSpaceOnUse" cx="242" cy="316" r="132">
+                  <stop offset=".15" stop-color="#ffe08a" stop-opacity=".95" />
+                  <stop offset="1" stop-color="#ffe08a" stop-opacity="0" />
+                </radialGradient>
+                <radialGradient id="cw-lens" cx="35%" cy="30%" r="80%">
+                  <stop offset="0" stop-color="#ffffff" stop-opacity=".95" />
+                  <stop offset="1" stop-color="#cfe9ea" stop-opacity=".8" />
+                </radialGradient>
+                <radialGradient id="cw-desk">
+                  <stop offset="0" stop-color="#e6dcc3" stop-opacity=".95" />
+                  <stop offset=".55" stop-color="#eee7d5" stop-opacity=".7" />
+                  <stop offset="1" stop-color="#f7f3ea" stop-opacity="0" />
+                </radialGradient>
+                <radialGradient id="cw-contact">
+                  <stop offset="0" stop-color="#1d2b2a" stop-opacity=".26" />
+                  <stop offset=".65" stop-color="#1d2b2a" stop-opacity=".12" />
+                  <stop offset="1" stop-color="#1d2b2a" stop-opacity="0" />
+                </radialGradient>
+                <marker id="cw-arrow-dim" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="4.6" markerHeight="4.6" orient="auto-start-reverse">
+                  <path d="M1.5 1.5L8.5 5L1.5 8.5" fill="none" stroke="#a08a4c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                </marker>
+                <marker id="cw-arrow-coral" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                  <path d="M1 1L9 5L1 9Z" fill="#c0634d" />
+                </marker>
+                <marker id="cw-arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                  <path d="M1 1L9 5L1 9Z" fill="#17756a" />
+                </marker>
+                <marker id="cw-arrow-gold" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                  <path d="M1 1L9 5L1 9Z" fill="#d2a237" />
+                </marker>
+                <g id="cw-key">
+                  <path d="M-8 0H-34M-26 0v8M-33 0v7" fill="none" stroke="#8a6a1c" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle r="8" fill="none" stroke="#8a6a1c" stroke-width="7.5" />
+                  <path d="M-8 0H-34M-26 0v8M-33 0v7" fill="none" stroke="#efc75e" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle r="8" fill="none" stroke="#efc75e" stroke-width="4.2" />
+                </g>
+                <!-- clue-card pictograms, 64 x 38 box -->
+                <g id="cw-pic-lock">
+                  <path d="M10 19v-6a8 8 0 0 1 16 0v6" fill="none" stroke="#70807f" stroke-width="4" stroke-linecap="round" />
+                  <rect x="4" y="17" width="28" height="21" rx="5" fill="#e7bd4f" stroke="#a8842d" stroke-width="2" />
+                  <circle cx="18" cy="25.5" r="3" fill="#5a4518" />
+                  <path d="M18 26v6" stroke="#5a4518" stroke-width="3" stroke-linecap="round" />
+                  <use href="#cw-key" transform="translate(54 11) rotate(-42) scale(.62)" />
+                </g>
+                <g id="cw-pic-rain">
+                  <path d="M17 24a8.5 8.5 0 0 1 1-17a12 12 0 0 1 23-1a9.5 9.5 0 0 1 4 18Z" fill="#a4bcc1" stroke="#7f9da4" stroke-width="2" stroke-linejoin="round" />
+                  <path d="M20 29l-3 8M31 29l-3 8M42 29l-3 8" stroke="#5f8f9a" stroke-width="3.2" stroke-linecap="round" />
+                </g>
+                <g id="cw-pic-ship">
+                  <rect x="27" y="2" width="9" height="11" rx="1.5" fill="#17756a" />
+                  <rect x="27" y="4.5" width="9" height="3" fill="#e7bd4f" />
+                  <rect x="19" y="12" width="26" height="10" rx="2" fill="#fdf8ee" stroke="#c9bd9d" stroke-width="1.8" />
+                  <circle cx="26" cy="17" r="2" fill="#17756a" /><circle cx="33" cy="17" r="2" fill="#17756a" /><circle cx="40" cy="17" r="2" fill="#17756a" />
+                  <path d="M6 22H58L50 33H14Z" fill="#b65b46" stroke="#8f4535" stroke-width="1.6" stroke-linejoin="round" />
+                  <path d="M3 36q5-5 10 0t10 0t10 0t10 0t10 0t8 0" fill="none" stroke="#2f9a8a" stroke-width="3" stroke-linecap="round" />
+                </g>
+                <g id="cw-pic-hand">
+                  <path d="M20 9q12-9 24 0" fill="none" stroke="#17756a" stroke-width="2.6" stroke-linecap="round" marker-end="url(#cw-arrow)" />
+                  <rect x="-1" y="21" width="14" height="13" rx="3" fill="#e0b64e" />
+                  <circle cx="17" cy="27.5" r="7" fill="#f4cfae" stroke="#d9a67e" stroke-width="1.5" />
+                  <rect x="51" y="21" width="14" height="13" rx="3" fill="#4a6068" />
+                  <circle cx="47" cy="27.5" r="7" fill="#eec4a0" stroke="#d9a67e" stroke-width="1.5" />
+                  <use href="#cw-key" transform="translate(41 20) scale(.55)" />
+                </g>
+                <g id="cw-pic-pocket">
+                  <path d="M8 0H56V32a6 6 0 0 1-6 6H14a6 6 0 0 1-6-6Z" fill="#4a6068" />
+                  <circle cx="15" cy="9" r="2.6" fill="#e7bd4f" /><circle cx="15" cy="23" r="2.6" fill="#e7bd4f" />
+                  <use href="#cw-key" transform="translate(37 4) rotate(-90) scale(.55)" />
+                  <path d="M24 15H50V29a6 6 0 0 1-6 6H30a6 6 0 0 1-6-6Z" fill="#5f7982" stroke="#2e3f46" stroke-width="2" stroke-linejoin="round" />
+                  <path d="M24 20H50" stroke="#2e3f46" stroke-width="2" stroke-dasharray="3 3" />
+                </g>
+                <g id="cw-pic-clock">
+                  <circle cx="19" cy="19" r="15.5" fill="#fdf8ee" stroke="#17756a" stroke-width="3.6" />
+                  <path d="M19 19V9M19 19l7 4" fill="none" stroke="#242b2b" stroke-width="3" stroke-linecap="round" />
+                  <path d="M48 1a9 9 0 1 0 8 13a7.5 7.5 0 0 1-8-13Z" fill="#e7bd4f" stroke="#a8842d" stroke-width="1.2" />
+                  <use href="#cw-key" transform="translate(59 30) scale(.55)" />
+                </g>
+              </defs>
+
+              <!-- ======== backdrop + ground ======== -->
+              <ellipse cx="500" cy="300" rx="470" ry="230" fill="url(#cw-wash)" />
+              <!-- soft desk surface that melts into the white page + contact shadow under the book -->
+              <ellipse cx="500" cy="497" rx="530" ry="33" fill="url(#cw-desk)" />
+              <ellipse cx="500" cy="493" rx="400" ry="15" fill="url(#cw-contact)" />
+
+              <!-- ======== the storybook (the stage) ======== -->
+              <g class="cw-book">
+                <path d="M152 480H848q8 0 6 7l-1 3q-2 6-9 6H156q-7 0-9-6l-1-3q-2-7 6-7Z" fill="#0f5a51" />
+                <path d="M208 332H792q8 0 11 8l53 136q3 10-7 10H151q-10 0-7-10l53-136q3-8 11-8Z" fill="#17756a" />
+                <path d="M208 337H792q5 0 7 5l51 133" fill="none" stroke="#3aa593" stroke-width="2" opacity=".55" />
+                <path d="M158 470H842l5 11H153Z" fill="#efe5cc" />
+                <path d="M157 474H843M155 478H845" stroke="#d6c9a6" stroke-width="1.4" />
+                <path d="M216 342Q360 331 500 348V474Q330 457 160 471Z" fill="url(#cw-pageL)" />
+                <path d="M784 342Q640 331 500 348V474Q670 457 840 471Z" fill="url(#cw-pageR)" />
+                <path d="M500 348V474" stroke="#cfc3a2" stroke-width="2" />
+                <path d="M178 392l14 0M175 402l18-.4M172 412l20-.6M170 422l16-.6M167 436l22-1M165 446l18-1M822 392l-14 0M825 402l-18-.4M828 412l-20-.6M830 422l-16-.6M833 436l-22-1M835 446l-18-1" stroke="#ddd2b5" stroke-width="2.4" stroke-linecap="round" />
+                <path class="cw-pagedim" d="M216 342Q360 331 500 348Q640 331 784 342L840 471Q670 457 500 474Q330 457 160 471Z" fill="#eceae4" />
+                <path d="M144 468l22 0l-24 18q-3-8 2-18Z" fill="#e0b64e" />
+                <path d="M856 468l-22 0l24 18q3-8-2-18Z" fill="#e0b64e" />
+                <path d="M493 470h15v26l-7.5-6l-7.5 6Z" fill="#c8664f" />
+              </g>
+
+              <!-- ======== pop-up world ======== -->
+              <g class="cw-world">
+                <g class="cw-piece" style="--ox:500px;--d:0s">
+                  <path d="M204 354Q228 300 262 291Q284 281 306 296Q356 252 420 290Q462 270 500 292Q556 254 616 288Q676 258 728 292Q748 283 764 296Q784 314 796 354Z" fill="#edf5f1" />
+                  <path d="M212 354Q248 312 290 307Q322 305 352 322Q420 292 500 320Q580 290 648 320Q700 300 740 313Q770 325 790 354Z" fill="#dfeee8" />
+                </g>
+                <path class="cw-rays amb" d="M242 316L227.1 184.8L256.9 184.8ZM242 316L294.6 194.9L320.5 209.9ZM242 316L348.1 237.5L363.1 263.4ZM242 316L373.2 301.1L373.2 330.9ZM242 316L363.1 368.6L348.1 394.5ZM242 316L320.5 422.1L294.6 437.1ZM242 316L256.9 447.2L227.1 447.2ZM242 316L189.4 437.1L163.5 422.1ZM242 316L135.9 394.5L120.9 368.6ZM242 316L110.8 330.9L110.8 301.1ZM242 316L120.9 263.4L135.9 237.5ZM242 316L163.5 209.9L189.4 194.9Z" fill="url(#cw-raygrad)" />
+                <rect x="235" y="356" width="14" height="30" rx="3" fill="#f3ead6" stroke="#e2d6b8" stroke-width="1.5"/><rect x="338" y="356" width="14" height="30" rx="3" fill="#f3ead6" stroke="#e2d6b8" stroke-width="1.5"/><rect x="441" y="356" width="14" height="30" rx="3" fill="#f3ead6" stroke="#e2d6b8" stroke-width="1.5"/><rect x="544" y="356" width="14" height="30" rx="3" fill="#f3ead6" stroke="#e2d6b8" stroke-width="1.5"/><rect x="647" y="356" width="14" height="30" rx="3" fill="#f3ead6" stroke="#e2d6b8" stroke-width="1.5"/><rect x="750" y="356" width="14" height="30" rx="3" fill="#f3ead6" stroke="#e2d6b8" stroke-width="1.5"/>
+
+                <!-- [41] rain cloud -->
+                <g class="cw-piece" style="--ox:345px;--d:.22s">
+                  <g class="cw-p41">
+                    <path d="M319 224h52l-6 140h-40Z" fill="#dcebee" opacity=".8" />
+                    <g class="cw-rain amb" stroke="#6f9aa5" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="10 12">
+                      <path d="M332 228l-7 130" /><path d="M346 228l-7 130" /><path d="M360 228l-7 130" />
+                    </g>
+                    <ellipse cx="345" cy="363" rx="27" ry="5" fill="#bcd6db" />
+                    <g filter="url(#cw-sh-sm)">
+                      <path d="M320 226a19 19 0 0 1 2-38a27 27 0 0 1 50-4a21 21 0 0 1 2 42Z" fill="#a4bcc1" stroke="#fffdf6" stroke-width="3" stroke-linejoin="round" />
+                      <path d="M326 196a15 15 0 0 1 14-5M346 176a20 20 0 0 1 18 6" fill="none" stroke="#d3e2e4" stroke-width="4" stroke-linecap="round" />
+                    </g>
+                  </g>
+                </g>
+
+                <!-- [12] attic wall + door -->
+                <g class="cw-piece" style="--ox:242px;--d:.1s" filter="url(#cw-sh-sm)">
+                  <path d="M196 366V226L242 170L288 226V366Z" fill="#f6ead0" stroke="#fffdf6" stroke-width="3" stroke-linejoin="round" />
+                  <path d="M203 252h13M272 262h10M203 300h8M276 326h8M204 344h12" stroke="#e5d6b1" stroke-width="3" stroke-linecap="round" />
+                  <circle cx="242" cy="211" r="11" fill="#cfe6df" stroke="#17756a" stroke-width="3" />
+                  <path d="M242 200v22M231 211h22" stroke="#17756a" stroke-width="2" />
+                  <path d="M188 232L242 166L296 232" fill="none" stroke="#b65b46" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+                <g class="cw-piece" style="--ox:242px;--d:.1s">
+                  <path d="M210 366V272a32 32 0 0 1 64 0V366Z" fill="#b8963f" />
+                  <path d="M217 366V272a25 25 0 0 1 50 0V366Z" fill="url(#cw-doorglow)" />
+                  <g class="cw-door-leaf">
+                    <path d="M217 366V272a25 25 0 0 1 50 0V366Z" fill="#17756a" />
+                    <path d="M225 298v-25a17 17 0 0 1 34 0v25ZM225 336h34v24h-34Z" fill="none" stroke="#3aa593" stroke-width="2.4" stroke-linejoin="round" />
+                    <rect x="217" y="284" width="7" height="12" rx="2" fill="#e0b64e" /><rect x="217" y="340" width="7" height="12" rx="2" fill="#e0b64e" />
+                    <g class="cw-padlock">
+                      <path class="cw-shackle" d="M234 310v-8a8.5 8.5 0 0 1 17 0v8" fill="none" stroke="#c9d3d1" stroke-width="4.6" stroke-linecap="round" />
+                      <rect x="228" y="308" width="29" height="23" rx="5.5" fill="#e7bd4f" stroke="#8a6a1c" stroke-width="2.2" />
+                      <circle cx="242.500" cy="317" r="3.1" fill="#5a4518" />
+                      <path d="M242.500 318v6" stroke="#5a4518" stroke-width="3" stroke-linecap="round" />
+                    </g>
+                  </g>
+                </g>
+
+                <!-- [86] harbour: ship + Mara -->
+                <g class="cw-piece" style="--ox:432px;--d:.34s">
+                  <g class="cw-ship amb">
+                    <g class="cw-smoke amb">
+                      <circle cx="427" cy="262" r="6" fill="#f3f5f4" stroke="#d2dbd8" stroke-width="1.5" />
+                      <circle cx="419" cy="249" r="8" fill="#f3f5f4" stroke="#d2dbd8" stroke-width="1.5" />
+                      <circle cx="408" cy="234" r="10" fill="#f3f5f4" stroke="#d2dbd8" stroke-width="1.5" />
+                    </g>
+                    <rect x="424" y="272" width="15" height="26" rx="2" fill="#17756a" />
+                    <rect x="424" y="278" width="15" height="5.5" fill="#e7bd4f" />
+                    <rect x="411" y="296" width="42" height="24" rx="3" fill="#fdf8ee" stroke="#d2c6a5" stroke-width="2" />
+                    <circle cx="421" cy="308" r="3.4" fill="#17756a" /><circle cx="432" cy="308" r="3.4" fill="#17756a" /><circle cx="443" cy="308" r="3.4" fill="#17756a" />
+                    <path d="M394 319H474L463 352H406Z" fill="#b65b46" stroke="#fffdf6" stroke-width="2.5" stroke-linejoin="round" />
+                    <path d="M399 328H470" stroke="#fdf8ee" stroke-width="3.4" />
+                  </g>
+                  <path d="M386 366v-16q7-8 14 0t14 0t14 0t14 0t14 0t14 0t14 0t14 0v16Z" fill="#2f9a8a" stroke="#fffdf6" stroke-width="2.5" stroke-linejoin="round" />
+                  <path d="M393 358q7-7 14 0t14 0t14 0t14 0t14 0t14 0t14 0" fill="none" stroke="#7cc9ba" stroke-width="2.4" stroke-linecap="round" />
+                </g>
+                <g class="cw-piece" style="--ox:482px;--d:.46s" filter="url(#cw-sh-sm)">
+                  <path d="M476 334V360M489 334V360" stroke="#2b3a3a" stroke-width="5.5" stroke-linecap="round" />
+                  <path d="M471 362h8M487 362h8" stroke="#b65b46" stroke-width="6" stroke-linecap="round" />
+                  <path d="M471 258L461 298" stroke="#d2a237" stroke-width="10" stroke-linecap="round" />
+                  <rect x="441" y="309" width="37" height="29" rx="5" fill="#b65b46" stroke="#8f4535" stroke-width="2" />
+                  <path d="M452 309v-5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v5" fill="none" stroke="#8f4535" stroke-width="3" />
+                  <path d="M450 309v29M469 309v29" stroke="#8f4535" stroke-width="2.4" />
+                  <rect x="456" y="320" width="7" height="6" rx="1.5" fill="#e7bd4f" />
+                  <circle cx="460" cy="302" r="5.6" fill="#f4cfae" />
+                  <path d="M468 247Q482 241 496 247L510 338Q482 347 454 338Z" fill="#e7bd4f" stroke="#fffdf6" stroke-width="2.5" stroke-linejoin="round" />
+                  <path d="M462 291Q482 298 502 291" fill="none" stroke="#b8963f" stroke-width="4" />
+                  <path d="M482 252v36" stroke="#b8963f" stroke-width="2" />
+                  <circle cx="482" cy="306" r="2.2" fill="#b8963f" /><circle cx="482" cy="320" r="2.2" fill="#b8963f" />
+                  <path d="M474 246l8 9l8-9" fill="#f3d27a" stroke="#b8963f" stroke-width="1.6" stroke-linejoin="round" />
+                  <path d="M493 259L526 268" stroke="#d2a237" stroke-width="10" stroke-linecap="round" />
+                  <circle cx="531" cy="269" r="5.8" fill="#f4cfae" />
+                  <circle cx="482" cy="224" r="17" fill="#f4cfae" />
+                  <path d="M466 224q-4 14 2 22q5-8 3-20ZM498 224q4 14-2 22q-5-8-3-20Z" fill="#3a2c2a" />
+                  <path d="M464 222Q464 199 482 199Q500 199 500 222Z" fill="#b65b46" />
+                  <path d="M460 222Q482 231 504 222" fill="none" stroke="#8f4535" stroke-width="4.6" stroke-linecap="round" />
+                  <path d="M467 213Q482 218 497 213" fill="none" stroke="#f3b7a6" stroke-width="3" />
+                  <circle cx="485" cy="231" r="1.9" fill="#242b2b" /><circle cx="493.500" cy="231" r="1.9" fill="#242b2b" />
+                  <path d="M485.500 236.500q4 3 7.500 0" fill="none" stroke="#8f4535" stroke-width="1.8" stroke-linecap="round" />
+                  <circle cx="479" cy="236" r="3" fill="#f0a898" opacity=".75" />
+                </g>
+
+                <!-- [87] the hand-over -->
+                <g class="cw-piece" style="--ox:551px;--d:.58s">
+                  <path d="M551 366V284" stroke="#eadfc3" stroke-width="5" stroke-linecap="round" />
+                  <path d="M551.0 236.0L555.9 244.6L564.5 239.6L564.4 249.6L574.4 249.5L569.4 258.1L578.0 263.0L569.4 267.9L574.4 276.5L564.4 276.4L564.5 286.4L555.9 281.4L551.0 290.0L546.1 281.4L537.5 286.4L537.6 276.4L527.6 276.5L532.6 267.9L524.0 263.0L532.6 258.1L527.6 249.5L537.6 249.6L537.5 239.6L546.1 244.6Z" fill="#fff3c4" stroke="#ecd48a" stroke-width="2" stroke-linejoin="round" filter="url(#cw-sh-sm)" />
+                  <g class="cw-key-print"><use href="#cw-key" transform="translate(563 262) scale(.82)" /></g>
+                </g>
+
+                <!-- [88] Leon in his coat -->
+                <g class="cw-piece" style="--ox:622px;--d:.66s" filter="url(#cw-sh-sm)">
+                  <path d="M615 336V360M629 336V360" stroke="#242b2b" stroke-width="5.5" stroke-linecap="round" />
+                  <path d="M609 362h8M627 362h8" stroke="#242b2b" stroke-width="6" stroke-linecap="round" />
+                  <path d="M605 247Q622 241 639 247L655 342Q622 351 591 342Z" fill="#4a6068" stroke="#fffdf6" stroke-width="2.5" stroke-linejoin="round" />
+                  <path d="M622 262v78" stroke="#35484f" stroke-width="2" />
+                  <path d="M611 246l11 17l11-17" fill="#5f7982" stroke="#35484f" stroke-width="1.5" stroke-linejoin="round" />
+                  <circle cx="617" cy="280" r="2.4" fill="#e7bd4f" /><circle cx="617" cy="296" r="2.4" fill="#e7bd4f" /><circle cx="617" cy="312" r="2.4" fill="#e7bd4f" />
+                  <use href="#cw-key" transform="translate(638 291) rotate(-90) scale(.5)" />
+                  <path d="M627 300h22v17a5 5 0 0 1-5 5h-12a5 5 0 0 1-5-5Z" fill="#5f7982" stroke="#2e3f46" stroke-width="2" stroke-linejoin="round" />
+                  <path d="M627 306h22" stroke="#2e3f46" stroke-width="1.8" />
+                  <path d="M635 258Q655 276 650 296" fill="none" stroke="#4a6068" stroke-width="10" stroke-linecap="round" />
+                  <circle cx="650" cy="299" r="5.4" fill="#eec4a0" />
+                  <path d="M611 259L576 268" stroke="#4a6068" stroke-width="10" stroke-linecap="round" />
+                  <circle cx="571" cy="269" r="5.8" fill="#eec4a0" />
+                  <path d="M608 245q14 7 28 0l1 8q-15 7-30 0Z" fill="#c8664f" />
+                  <path d="M613 251l-3 22l8-3l1-17Z" fill="#c8664f" />
+                  <circle cx="622" cy="224" r="17" fill="#eec4a0" />
+                  <path d="M604.500 224Q602 199 622 199Q642 199 639.500 224Q636 210 622 211Q608 210 604.500 224Z" fill="#2b3a3a" />
+                  <circle cx="611" cy="229" r="1.9" fill="#242b2b" /><circle cx="619.500" cy="229" r="1.9" fill="#242b2b" />
+                  <path d="M611.500 235q4 3 7.500 0" fill="none" stroke="#8f4535" stroke-width="1.8" stroke-linecap="round" />
+                  <circle cx="626" cy="234" r="3" fill="#f0a898" opacity=".6" />
+                </g>
+
+                <!-- [203] later that night -->
+                <g class="cw-piece" style="--ox:757px;--d:.78s" filter="url(#cw-sh-sm)">
+                  <path d="M714 366V196a43 43 0 0 1 86 0V366Z" fill="url(#cw-night)" stroke="#fffdf6" stroke-width="3" stroke-linejoin="round" />
+                  <g fill="#fff3c4">
+                    <circle class="cw-star amb" cx="729" cy="196" r="2.2" /><circle class="cw-star amb" style="animation-delay:-1.1s" cx="748" cy="172" r="1.8" />
+                    <circle class="cw-star amb" style="animation-delay:-.6s" cx="791" cy="224" r="2" /><circle class="cw-star amb" style="animation-delay:-1.7s" cx="724" cy="232" r="1.6" />
+                    <circle class="cw-star amb" style="animation-delay:-2.2s" cx="762" cy="214" r="1.8" />
+                  </g>
+                  <path d="M783 166a15 15 0 1 0 9 24a12.500 12.500 0 0 1-9-24Z" fill="#efc75e" />
+                  <path d="M778 366V268" stroke="#d7ba67" stroke-width="4.5" />
+                  <path d="M770 366h16" stroke="#d7ba67" stroke-width="5" stroke-linecap="round" />
+                  <circle cx="778" cy="252" r="16" fill="#fdf8ee" stroke="#d7ba67" stroke-width="3.6" />
+                  <path d="M778 252V241" stroke="#242b2b" stroke-width="2.6" stroke-linecap="round" />
+                  <path class="cw-clockhand amb" d="M778 252l7.500 4.500" stroke="#242b2b" stroke-width="2.6" stroke-linecap="round" />
+                  <circle cx="725" cy="256" r="21" fill="#fff3c4" opacity=".16" />
+                  <path d="M735 316L727 286" stroke="#4a6068" stroke-width="9" stroke-linecap="round" />
+                  <path d="M735 316L727 286" stroke="#6d8790" stroke-width="1.5" stroke-linecap="round" opacity=".7" />
+                  <g class="cw-key-print cw-p203-key"><use href="#cw-key" transform="translate(725 268) rotate(90) scale(.8)" /></g>
+                  <circle cx="726" cy="281" r="5.2" fill="#eec4a0" />
+                  <path d="M733 312Q746 306 759 312L768 366H724Z" fill="#4a6068" stroke="#6d8790" stroke-width="1.5" stroke-linejoin="round" />
+                  <path d="M735 310q11 6 22 0l1 7q-12 6-24 0Z" fill="#c8664f" />
+                  <circle cx="746" cy="294" r="13.500" fill="#eec4a0" />
+                  <path d="M732.500 294Q731 275 746 275Q761 275 759.500 294Q756 284 746 285Q736 284 732.500 294Z" fill="#1d2b2a" />
+                  <circle cx="739" cy="296" r="1.7" fill="#242b2b" /><circle cx="746" cy="296" r="1.7" fill="#242b2b" />
+                  <path d="M739.500 301q3.500 2.500 6.500 0" fill="none" stroke="#8f4535" stroke-width="1.6" stroke-linecap="round" />
+                </g>
+              </g>
+
+              <g class="cw-vis" data-on="0" fill="none" stroke="#cbbf9e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M293.5 394l4 7l-8 7l8 7l-8 7l8 7l-8 7l8 7l-4 7" /><path d="M396.5 394l4 7l-8 7l8 7l-8 7l8 7l-8 7l8 7l-4 7" /><path d="M705.5 394l4 7l-8 7l8 7l-8 7l8 7l-8 7l8 7l-4 7" /></g>
+
+              <!-- how far apart the clues are: 87-12 = 75, 203-87 = 116 paragraphs -->
+              <g class="cw-vis cw-dist" data-on="0">
+                <path d="M242 499v13M551 499v13M757 499v13" fill="none" stroke="#a08a4c" stroke-width="2.4" stroke-linecap="round" />
+                <path d="M247 506H546M556 506H752" fill="none" stroke="#a08a4c" stroke-width="2" stroke-dasharray="2 5" stroke-linecap="round" marker-start="url(#cw-arrow-dim)" marker-end="url(#cw-arrow-dim)" />
+                <g transform="translate(396.5 506)"><rect class="cw-dist-bg" x="-62" y="-11" width="124" height="22" rx="11" /><text class="cw-dist-text" y="5.2">75 paragraphs</text></g>
+                <g transform="translate(654 506)"><rect class="cw-dist-bg" x="-66" y="-11" width="132" height="22" rx="11" /><text class="cw-dist-text" y="5.2">116 paragraphs</text></g>
+              </g>
+
+              <!-- ======== candidate windows (Retrieve / Select) ======== -->
+              <g class="cw-frames">
+        <g class="cw-frame cw-frame-yes cw-vis" data-on="1 2" style="--fd:0.35s;--fo:212px 378px">
+          <g class="cw-frame-grow"><rect class="cw-frame-box amb" x="195" y="152" width="98" height="326" rx="16" /></g>
+          <g transform="translate(241 152)">
+            <g class="cw-pop" data-on="2" style="--pd:0.25s">
+              <rect x="-6" y="-16" width="62" height="32" rx="16" fill="#17756a" stroke="#fffdf6" stroke-width="2.5" />
+              <text class="cw-tag-text cw-tag-verdict" x="31" y="7" fill="#fff">YES</text>
+            </g>
+            <g class="cw-frame-id">
+              <rect x="-22" y="-16" width="44" height="32" rx="16" fill="#fffdf6" stroke="#d7ba67" stroke-width="2.5" />
+              <text class="cw-tag-text" y="7.5" fill="#6c5315">S2</text>
+            </g>
+          </g>
+        </g>
+        <g class="cw-frame cw-frame-no cw-vis" data-on="1 2" style="--fd:0.47s;--fo:345px 378px">
+          <g class="cw-frame-grow"><rect class="cw-frame-box amb" x="298" y="152" width="95" height="326" rx="16" /></g>
+          <g transform="translate(350 152)">
+            <g class="cw-pop" data-on="2" style="--pd:0.47s">
+              <rect x="-6" y="-16" width="52" height="32" rx="16" fill="#c0634d" stroke="#fffdf6" stroke-width="2.5" />
+              <text class="cw-tag-text cw-tag-verdict" x="25.5" y="7" fill="#fff">NO</text>
+            </g>
+            <g class="cw-frame-id">
+              <rect x="-22" y="-16" width="44" height="32" rx="16" fill="#fffdf6" stroke="#d7ba67" stroke-width="2.5" />
+              <text class="cw-tag-text" y="7.5" fill="#6c5315">S3</text>
+            </g>
+          </g>
+        </g>
+        <g class="cw-frame cw-frame-yes cw-vis" data-on="1 2" style="--fd:0.59s;--fo:521px 378px">
+          <g class="cw-frame-grow"><rect class="cw-frame-box amb" x="400" y="176" width="296" height="302" rx="16" /></g>
+          <g transform="translate(452 176)">
+            <g class="cw-pop" data-on="2" style="--pd:0.69s">
+              <rect x="-6" y="-16" width="62" height="32" rx="16" fill="#17756a" stroke="#fffdf6" stroke-width="2.5" />
+              <text class="cw-tag-text cw-tag-verdict" x="31" y="7" fill="#fff">YES</text>
+            </g>
+            <g class="cw-frame-id">
+              <rect x="-22" y="-16" width="44" height="32" rx="16" fill="#fffdf6" stroke="#d7ba67" stroke-width="2.5" />
+              <text class="cw-tag-text" y="7.5" fill="#6c5315">S4</text>
+            </g>
+          </g>
+        </g>
+        <g class="cw-frame cw-frame-yes cw-vis" data-on="1 2" style="--fd:0.71s;--fo:521px 378px">
+          <g class="cw-frame-grow"><path class="cw-frame-box cw-frame-bracket amb" d="M503 398V494q0 8 8 8H700" /><path class="cw-frame-more" d="M709 502h.1M718 502h.1M727 502h.1" /></g>
+          <g transform="translate(664 502)">
+            <g class="cw-pop" data-on="2" style="--pd:0.91s">
+              <rect x="-6" y="-16" width="62" height="32" rx="16" fill="#17756a" stroke="#fffdf6" stroke-width="2.5" />
+              <text class="cw-tag-text cw-tag-verdict" x="31" y="7" fill="#fff">YES</text>
+            </g>
+            <g class="cw-frame-id">
+              <rect x="-22" y="-16" width="44" height="32" rx="16" fill="#fffdf6" stroke="#d7ba67" stroke-width="2.5" />
+              <text class="cw-tag-text" y="7.5" fill="#6c5315">S5</text>
+            </g>
+          </g>
+        </g>
+        <g class="cw-frame cw-frame-yes cw-vis" data-on="1 2" style="--fd:0.83s;--fo:727px 378px">
+          <g class="cw-frame-grow"><rect class="cw-frame-box amb" x="709" y="140" width="102" height="338" rx="16" /></g>
+          <g transform="translate(760 140)">
+            <g class="cw-pop" data-on="2" style="--pd:1.13s">
+              <rect x="-6" y="-16" width="62" height="32" rx="16" fill="#17756a" stroke="#fffdf6" stroke-width="2.5" />
+              <text class="cw-tag-text cw-tag-verdict" x="31" y="7" fill="#fff">YES</text>
+            </g>
+            <g class="cw-frame-id">
+              <rect x="-22" y="-16" width="44" height="32" rx="16" fill="#fffdf6" stroke="#d7ba67" stroke-width="2.5" />
+              <text class="cw-tag-text" y="7.5" fill="#6c5315">S1</text>
+            </g>
+          </g>
+        </g>
+              </g>
+
+              <!-- empty slots left behind once the tabs are collected -->
+              <g class="cw-slots cw-vis" data-on="3 4 5 6" fill="#fffdf6" fill-opacity=".55" stroke="#cfc3a2" stroke-width="2" stroke-dasharray="6 6"><rect x="205" y="383" width="74" height="82" rx="9" /><path d="M217 402h50M217 416h44M217 430h50M217 444h32" stroke-dasharray="none" stroke="#e6dcc0" stroke-width="3.2" stroke-linecap="round" /><rect x="411" y="383" width="74" height="82" rx="9" /><path d="M423 402h50M423 416h44M423 430h50M423 444h32" stroke-dasharray="none" stroke="#e6dcc0" stroke-width="3.2" stroke-linecap="round" /><rect x="514" y="383" width="74" height="82" rx="9" /><path d="M526 402h50M526 416h44M526 430h50M526 444h32" stroke-dasharray="none" stroke="#e6dcc0" stroke-width="3.2" stroke-linecap="round" /><rect x="617" y="383" width="74" height="82" rx="9" /><path d="M629 402h50M629 416h44M629 430h50M629 444h32" stroke-dasharray="none" stroke="#e6dcc0" stroke-width="3.2" stroke-linecap="round" /><rect x="720" y="383" width="74" height="82" rx="9" /><path d="M732 402h50M732 416h44M732 430h50M732 444h32" stroke-dasharray="none" stroke="#e6dcc0" stroke-width="3.2" stroke-linecap="round" /></g>
+
+              <!-- ======== Interpreter's reasoning path ======== -->
+              <g class="cw-path cw-vis" data-on="4 5 6">
+                <g class="cw-path-reveal">
+                  <path d="M264 296C300 160 480 150 548 236M556 236C600 172 690 172 722 236" fill="none" stroke="#fffdf6" stroke-width="9" stroke-linecap="round" opacity=".85" />
+                  <path class="cw-path-dots amb" d="M264 296C300 160 480 150 548 236M556 236C600 172 690 172 722 236" fill="none" stroke-width="5" stroke-linecap="round" stroke-dasharray=".1 12" />
+                </g>
+                <circle class="cw-scan amb" r="15" fill="none" stroke="#17756a" stroke-width="3.5" />
+              </g>
+
+              <!-- packet card -> chain node connectors (Reason / Self-check) and citations (Answer) share routes -->
+              <g class="cw-links cw-vis cw-only-d" data-on="4 5"><g class="cw-link" style="--ld:0.2s"><path d="M388 104C384 170 334 232 297 272" fill="none" stroke="#fffdf6" stroke-width="6" stroke-linecap="round" opacity=".9" /><path class="cw-link-line" d="M388 104C384 170 334 232 297 272" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="7 5" /></g><g class="cw-link" style="--ld:1.2s"><path d="M560 104C562 140 556 176 552 205" fill="none" stroke="#fffdf6" stroke-width="6" stroke-linecap="round" opacity=".9" /><path class="cw-link-line" d="M560 104C562 140 556 176 552 205" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="7 5" /></g><g class="cw-link" style="--ld:2.25s"><path d="M732 104C736 150 746 190 752 215" fill="none" stroke="#fffdf6" stroke-width="6" stroke-linecap="round" opacity=".9" /><path class="cw-link-line" d="M732 104C736 150 746 190 752 215" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="7 5" /></g></g>
+              <g class="cw-links cw-vis cw-only-m" data-on="4 5"><g class="cw-link" style="--ld:0.2s"><path d="M210 104C250 116 336 150 324 222C320 250 308 264 297 274" fill="none" stroke="#fffdf6" stroke-width="6" stroke-linecap="round" opacity=".9" /><path class="cw-link-line" d="M210 104C250 116 336 150 324 222C320 250 308 264 297 274" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="7 5" /></g><g class="cw-link" style="--ld:1.2s"><path d="M382 104C404 130 500 158 547 206" fill="none" stroke="#fffdf6" stroke-width="6" stroke-linecap="round" opacity=".9" /><path class="cw-link-line" d="M382 104C404 130 500 158 547 206" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="7 5" /></g><g class="cw-link" style="--ld:2.25s"><path d="M554 104C624 108 722 146 751 215" fill="none" stroke="#fffdf6" stroke-width="6" stroke-linecap="round" opacity=".9" /><path class="cw-link-line" d="M554 104C624 108 722 146 751 215" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="7 5" /></g></g>
+              <g class="cw-cites cw-vis cw-only-d" data-on="6" fill="none" stroke="#17756a" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 8">
+                <path class="amb cw-cite-line" d="M388 106C340 100 282 120 252 154" marker-end="url(#cw-arrow)" /><path class="amb cw-cite-line" d="M560 106C566 140 560 170 553 200" marker-end="url(#cw-arrow)" /><path class="amb cw-cite-line" d="M732 106C744 120 750 132 754 146" marker-end="url(#cw-arrow)" />
+              </g>
+              <g class="cw-cites cw-vis cw-only-m" data-on="6" fill="none" stroke="#17756a" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 8">
+                <path class="amb cw-cite-line" d="M210 106C214 126 226 144 238 158" marker-end="url(#cw-arrow)" /><path class="amb cw-cite-line" d="M382 106C404 120 502 150 543 222" marker-end="url(#cw-arrow)" /><path class="amb cw-cite-line" d="M554 106C614 104 704 112 748 146" marker-end="url(#cw-arrow)" />
+              </g>
+              <g class="cw-nodes">
+                <g transform="translate(282 282)"><g class="cw-pop cw-node-num" data-on="4" style="--pd:0.35s"><circle r="14" fill="#c0634d" stroke="#fffdf6" stroke-width="2.5" /><text class="cw-node-text" y="6.500">1</text></g></g><g transform="translate(551 222)"><g class="cw-pop cw-node-num" data-on="4" style="--pd:1.35s"><circle r="14" fill="#c0634d" stroke="#fffdf6" stroke-width="2.5" /><text class="cw-node-text" y="6.500">2</text></g></g><g transform="translate(754 232)"><g class="cw-pop cw-node-num" data-on="4" style="--pd:2.4s"><circle r="14" fill="#c0634d" stroke="#fffdf6" stroke-width="2.5" /><text class="cw-node-text" y="6.500">3</text></g></g>
+                <g transform="translate(282 282)"><g class="cw-pop" data-on="5" style="--pd:0.6s"><circle r="15" fill="#17756a" stroke="#fffdf6" stroke-width="2.5" /><path d="M-6.500 .5l4.500 5l8.500-10.500" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" /></g></g><g transform="translate(551 222)"><g class="cw-pop" data-on="5" style="--pd:1.7s"><circle r="15" fill="#17756a" stroke="#fffdf6" stroke-width="2.5" /><path d="M-6.500 .5l4.500 5l8.500-10.500" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" /></g></g><g transform="translate(754 232)"><g class="cw-pop" data-on="5" style="--pd:2.9s"><circle r="15" fill="#17756a" stroke="#fffdf6" stroke-width="2.5" /><path d="M-6.500 .5l4.500 5l8.500-10.500" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" /></g></g>
+              </g>
+
+              <!-- ======== wastebasket (back), paragraph tabs / clue cards, wastebasket (front) ======== -->
+              <g class="cw-basket">
+                <ellipse cx="176" cy="465" rx="28" ry="7" fill="#8f7a45" />
+                <ellipse cx="176" cy="466.5" rx="24" ry="5" fill="#5e4f2a" />
+              </g>
+              <g class="cw-cards">
+                
+        <g class="cw-card cw-c41" data-kind="drop">
+          <g class="cw-card-in">
+            <rect class="cw-card-bg" width="80" height="88" rx="10" />
+            <circle class="cw-card-hole" cx="40" cy="8.5" r="3.2" />
+            <use href="#cw-pic-rain" x="8" y="15" />
+            <path class="cw-card-rule" d="M10 57.5H70" />
+            <text class="cw-card-id" x="40" y="80.5">[41]</text>
+          </g>
+        </g>
+                
+        <g class="cw-card cw-c12" data-kind="keep" style="--slot:0">
+          <g class="cw-card-in">
+            <rect class="cw-card-bg" width="80" height="88" rx="10" />
+            <circle class="cw-card-hole" cx="40" cy="8.5" r="3.2" />
+            <use href="#cw-pic-lock" x="8" y="15" />
+            <path class="cw-card-rule" d="M10 57.5H70" />
+            <text class="cw-card-id" x="40" y="80.5">[12]</text>
+          </g>
+        </g>
+        <g class="cw-card cw-c86" data-kind="ctx" style="--slot:1">
+          <g class="cw-card-in">
+            <rect class="cw-card-bg" width="80" height="88" rx="10" />
+            <circle class="cw-card-hole" cx="40" cy="8.5" r="3.2" />
+            <use href="#cw-pic-ship" x="8" y="15" />
+            <path class="cw-card-rule" d="M10 57.5H70" />
+            <text class="cw-card-id" x="40" y="80.5">[86]</text>
+          </g>
+        </g>
+        <g class="cw-card cw-c87" data-kind="keep" style="--slot:2">
+          <g class="cw-card-in">
+            <rect class="cw-card-bg" width="80" height="88" rx="10" />
+            <circle class="cw-card-hole" cx="40" cy="8.5" r="3.2" />
+            <use href="#cw-pic-hand" x="8" y="15" />
+            <path class="cw-card-rule" d="M10 57.5H70" />
+            <text class="cw-card-id" x="40" y="80.5">[87]</text>
+          </g>
+        </g>
+        <g class="cw-card cw-c88" data-kind="ctx" style="--slot:3">
+          <g class="cw-card-in">
+            <rect class="cw-card-bg" width="80" height="88" rx="10" />
+            <circle class="cw-card-hole" cx="40" cy="8.5" r="3.2" />
+            <use href="#cw-pic-pocket" x="8" y="15" />
+            <path class="cw-card-rule" d="M10 57.5H70" />
+            <text class="cw-card-id" x="40" y="80.5">[88]</text>
+          </g>
+        </g>
+        <g class="cw-card cw-c203" data-kind="keep" style="--slot:4">
+          <g class="cw-card-in">
+            <rect class="cw-card-bg" width="80" height="88" rx="10" />
+            <circle class="cw-card-hole" cx="40" cy="8.5" r="3.2" />
+            <use href="#cw-pic-clock" x="8" y="15" />
+            <path class="cw-card-rule" d="M10 57.5H70" />
+            <text class="cw-card-id" x="40" y="80.5">[203]</text>
+          </g>
+        </g>
+              </g>
+              <g class="cw-basket">
+                <path d="M148 465a28 7 0 0 0 56 0l-6 38a5 5 0 0 1-5 4h-34a5 5 0 0 1-5-4Z" fill="#e9d7a6" stroke="#a8842d" stroke-width="2.2" stroke-linejoin="round" />
+                <path d="M158 471l3.500 33M170 472.500l1.500 33M182 472.500l-1.500 33M194 471l-3.500 33" fill="none" stroke="#c9ac62" stroke-width="2" stroke-linecap="round" />
+                <path d="M148 465a28 7 0 0 0 56 0" fill="none" stroke="#a8842d" stroke-width="4" stroke-linecap="round" />
+                <g class="cw-vis" data-on="2 3 4 5 6" style="--vd:1.1s">
+                  <rect x="155" y="478" width="42" height="19" rx="6" fill="#fdf6f2" stroke="#d9a192" stroke-width="1.6" />
+                  <text class="cw-bin-text" x="176" y="492.500">[41]</text>
+                </g>
+              </g>
+
+              <!-- ======== the woven evidence packet: string, budget ruler, merge mark, re-check loop ======== -->
+              <g class="cw-strip">
+                <g class="cw-vis cw-late" data-on="3 4 5 6">
+                  <path class="cw-thread amb" d="M-14 22.500H438" />
+                </g>
+                <g class="cw-vis cw-late" data-on="3">
+                  <g transform="translate(0 120)">
+                    <rect x="0" y="0" width="368" height="14" rx="7" fill="#f4efe1" stroke="#d6c9a6" stroke-width="2" />
+                    <rect class="cw-budget-fill" x="2" y="2" width="180.400" height="10" rx="5" fill="#6aab8f" />
+                    <path d="M42.400 2v5M82.900 2v5M123.300 2v5M163.800 2v5M204.200 2v5M244.700 2v5M285.100 2v5M325.600 2v5" stroke="#b9ad8c" stroke-width="1.6" />
+                    <text class="cw-meter-text" x="378" y="14.500">446 / 900</text>
+                  </g>
+                </g>
+                <g class="cw-vis" data-on="4 5 6">
+                  <circle cx="-14" cy="22.500" r="4.500" fill="#d9a93a" />
+                  <g transform="translate(440 22.500)" fill="#f3d27a" stroke="#c9972b" stroke-width="2.4" stroke-linejoin="round">
+                    <path d="M0 0C-4-14 14-18 16-8C17-2 8 0 0 0Z" /><path d="M0 0C-4 14 14 18 16 8C17 2 8 0 0 0Z" />
+                    <path d="M0 0C6 8 8 18 4 28M0 0C10 6 16 14 16 24" fill="none" stroke-linecap="round" />
+                    <circle r="4.200" fill="#d9a93a" />
+                  </g>
+                </g>
+                <g class="cw-vis" data-on="5">
+                  <rect class="cw-loop amb" x="-12" y="4" width="448" height="110" rx="22" />
+                  <path d="M88 -2l14 6l-14 6Z" fill="#c0634d" />
+                  <path d="M120 120l-14-6l14-6Z" fill="#c0634d" />
+                  <g transform="translate(298 116)">
+                    <rect x="-76" y="-14" width="152" height="28" rx="14" fill="#fcf0ec" stroke="#c0634d" stroke-width="2.4" />
+                    <path d="M-60.500-2v-3.500a4.500 4.500 0 0 1 9 0v3.500" fill="none" stroke="#c0634d" stroke-width="2.6" stroke-linecap="round" />
+                    <rect x="-63" y="-2.500" width="14" height="11" rx="2.500" fill="#c0634d" />
+                    <text class="cw-same-text" x="13" y="5.600">same packet</text>
+                  </g>
+                </g>
+                <!-- reasoning captions sit right under their source cards -->
+                <g class="cw-caps">
+                  <g transform="translate(40 129)"><g class="cw-pop cw-cap" data-on="4" style="--pd:0.5s"><rect x="-64" y="-13" width="128" height="26" rx="13" /><text class="cw-cap-text" y="5.300">needs the key</text></g></g><g transform="translate(212 129)"><g class="cw-pop cw-cap" data-on="4" style="--pd:1.5s"><rect x="-68" y="-13" width="136" height="26" rx="13" /><text class="cw-cap-text" y="5.300">handed to Leon</text></g></g><g transform="translate(384 129)"><g class="cw-pop cw-cap" data-on="4" style="--pd:2.55s"><rect x="-56" y="-13" width="112" height="26" rx="13" /><text class="cw-cap-text" y="5.300">still has it</text></g></g>
+                </g>
+              </g>
+
+              <!-- KEEP / CONTEXT / DROP badges ride above the string -->
+              <g class="cw-cards">
+                
+        <g class="cw-card cw-badge-layer cw-c12" data-kind="keep" style="--slot:0">
+          <g class="cw-card-in"><g transform="translate(71 9)"><g class="cw-badge cw-pop" data-on="2 3 4 5 6"><circle r="11" fill="#17756a" stroke="#fffdf6" stroke-width="2.5"/><path d="M-5 0.5l3.6 3.8l6.6-8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g></g></g>
+        </g>
+        <g class="cw-card cw-badge-layer cw-c41" data-kind="drop">
+          <g class="cw-card-in"><g transform="translate(71 9)"><g class="cw-badge cw-pop" data-on="2 3 4 5 6"><circle r="11" fill="#c8705a" stroke="#fffdf6" stroke-width="2.5"/><path d="M-4.2-4.2l8.4 8.4M4.2-4.2l-8.4 8.4" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/></g></g></g>
+        </g>
+        <g class="cw-card cw-badge-layer cw-c86" data-kind="ctx" style="--slot:1">
+          <g class="cw-card-in"><g transform="translate(71 9)"><g class="cw-badge cw-pop" data-on="2 3 4 5 6"><circle r="11" fill="#e0b64e" stroke="#fffdf6" stroke-width="2.5"/><path d="M-5 0h10M0-5v10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/></g></g></g>
+        </g>
+        <g class="cw-card cw-badge-layer cw-c87" data-kind="keep" style="--slot:2">
+          <g class="cw-card-in"><g transform="translate(71 9)"><g class="cw-badge cw-pop" data-on="2 3 4 5 6"><circle r="11" fill="#17756a" stroke="#fffdf6" stroke-width="2.5"/><path d="M-5 0.5l3.6 3.8l6.6-8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g></g></g>
+        </g>
+        <g class="cw-card cw-badge-layer cw-c88" data-kind="ctx" style="--slot:3">
+          <g class="cw-card-in"><g transform="translate(71 9)"><g class="cw-badge cw-pop" data-on="2 3 4 5 6"><circle r="11" fill="#e0b64e" stroke="#fffdf6" stroke-width="2.5"/><path d="M-5 0h10M0-5v10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/></g></g></g>
+        </g>
+        <g class="cw-card cw-badge-layer cw-c203" data-kind="keep" style="--slot:4">
+          <g class="cw-card-in"><g transform="translate(71 9)"><g class="cw-badge cw-pop" data-on="2 3 4 5 6"><circle r="11" fill="#17756a" stroke="#fffdf6" stroke-width="2.5"/><path d="M-5 0.5l3.6 3.8l6.6-8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g></g></g>
+        </g>
+              </g>
+
+              <!-- the duplicate [87] citation (S4 and S5 both cite it) and its merge mark -->
+              <g class="cw-dup">
+                <g class="cw-dup-in" filter="url(#cw-sh-sm)">
+                  <rect x="0" y="0" width="62" height="32" rx="9" fill="#e8f4ef" stroke="#17756a" stroke-width="2.4" />
+                  <circle cx="9" cy="16" r="3" fill="#fff" stroke="#9cc7bb" stroke-width="1.4" />
+                  <text class="cw-dup-text" x="36" y="23">[87]</text>
+                  <g transform="translate(60 0)"><circle r="12" fill="#c0634d" stroke="#fffdf6" stroke-width="2.4" /><text class="cw-x2-text" y="5">×2</text></g>
+                </g>
+              </g>
+              <g class="cw-strip">
+                <g transform="translate(205 13)"><g class="cw-pop" data-on="3 4 5 6" style="--pd:1.25s">
+                  <rect x="-24" y="-11" width="48" height="22" rx="11" fill="#c0634d" stroke="#fffdf6" stroke-width="2.4" />
+                  <text class="cw-merge-text" x="-13" y="5.400">2</text>
+                  <path d="M-6 0h10" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" /><path d="M1-3.500l4 3.500l-4 3.500" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                  <text class="cw-merge-text" x="14" y="5.400">1</text>
+                </g></g>
+              </g>
+
+              <!-- retrieval: the claim finds its anchor paragraphs, windows grow around the pins -->
+              <g class="cw-vis" data-on="1">
+                <g class="cw-only-m" fill="none" stroke="#d2a237" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 8">
+                  <path class="cw-query amb" d="M644 40C500 -2 300 36 250 124" marker-end="url(#cw-arrow-gold)" />
+                  <path class="cw-query amb" d="M644 70C590 72 500 104 460 150" marker-end="url(#cw-arrow-gold)" />
+                </g>
+                <g class="cw-only-d" fill="none" stroke="#d2a237" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 8">
+                  <path class="cw-query amb" d="M162 76C192 84 226 102 238 126" marker-end="url(#cw-arrow-gold)" />
+                  <path class="cw-query amb" d="M162 54C280 40 410 84 444 150" marker-end="url(#cw-arrow-gold)" />
+                  <path class="cw-query amb" d="M162 32C380 -10 690 10 752 112" marker-end="url(#cw-arrow-gold)" />
+                </g>
+                <g transform="translate(219 386)">
+                  <circle class="cw-ping amb" style="animation-delay:0s" r="17" />
+                  <g class="cw-pop cw-pin" data-on="1" style="--pd:0.10s">
+                    <g transform="rotate(-16)">
+                      <path d="M0 0C-5-10-14-17-14-28a14 14 0 1 1 28 0C14-17 5-10 0 0Z" fill="#e9b93f" stroke="#fffdf6" stroke-width="2.6" stroke-linejoin="round" />
+                      <path d="M0 0C-5-10-14-17-14-28a14 14 0 1 1 28 0C14-17 5-10 0 0Z" fill="none" stroke="#a8842d" stroke-width="1.2" stroke-linejoin="round" />
+                      <circle cx="0" cy="-28" r="5.500" fill="#fffdf6" />
+                    </g>
+                  </g>
+                </g><g transform="translate(528 386)">
+                  <circle class="cw-ping amb" style="animation-delay:-0.5s" r="17" />
+                  <g class="cw-pop cw-pin" data-on="1" style="--pd:0.22s">
+                    <g transform="rotate(-16)">
+                      <path d="M0 0C-5-10-14-17-14-28a14 14 0 1 1 28 0C14-17 5-10 0 0Z" fill="#e9b93f" stroke="#fffdf6" stroke-width="2.6" stroke-linejoin="round" />
+                      <path d="M0 0C-5-10-14-17-14-28a14 14 0 1 1 28 0C14-17 5-10 0 0Z" fill="none" stroke="#a8842d" stroke-width="1.2" stroke-linejoin="round" />
+                      <circle cx="0" cy="-28" r="5.500" fill="#fffdf6" />
+                    </g>
+                  </g>
+                </g><g transform="translate(734 386)">
+                  <circle class="cw-ping amb" style="animation-delay:-1s" r="17" />
+                  <g class="cw-pop cw-pin" data-on="1" style="--pd:0.34s">
+                    <g transform="rotate(-16)">
+                      <path d="M0 0C-5-10-14-17-14-28a14 14 0 1 1 28 0C14-17 5-10 0 0Z" fill="#e9b93f" stroke="#fffdf6" stroke-width="2.6" stroke-linejoin="round" />
+                      <path d="M0 0C-5-10-14-17-14-28a14 14 0 1 1 28 0C14-17 5-10 0 0Z" fill="none" stroke="#a8842d" stroke-width="1.2" stroke-linejoin="round" />
+                      <circle cx="0" cy="-28" r="5.500" fill="#fffdf6" />
+                    </g>
+                  </g>
+                </g>
+              </g>
+
+              <!-- ======== the travelling brass key + TRUE ======== -->
+              <g class="cw-true">
+                <path d="M308 160H448l-12 21.500l12 21.500H308Z" fill="#17756a" stroke="#fffdf6" stroke-width="3" stroke-linejoin="round" />
+                <text x="373" y="194" font-size="34" font-weight="800" fill="#fff" text-anchor="middle" letter-spacing="2">TRUE</text>
+              </g>
+              <g class="cw-hero">
+                <g class="cw-hero-amb amb">
+                  <circle r="25" fill="#ffd96b" opacity=".75" filter="url(#cw-blur)" />
+                  <use href="#cw-key" transform="translate(16 0) scale(1.2)" />
+                </g>
+              </g>
+
+              <!-- ======== Finder ======== -->
+              <g class="cw-finder">
+                <g class="cw-bot">
+                  <ellipse class="cw-only-m" cx="0" cy="5" rx="120" ry="20" fill="url(#cw-desk)" />
+                  <ellipse cx="0" cy="3" rx="70" ry="10" fill="url(#cw-contact)" />
+                  <g class="cw-hop">
+                    <rect x="-33" y="-54" width="17" height="36" rx="6" fill="#1f7f72" />
+                    <rect x="16" y="-54" width="17" height="36" rx="6" fill="#1f7f72" />
+                    <path d="M-47-3v-7q0-16 18-16h8q15 0 15 15v8Z" fill="#17756a" />
+                    <rect x="-49" y="-7" width="45" height="8" rx="4" fill="#0f5a51" />
+                    <path d="M6-3v-8q0-15 15-15h8q18 0 18 16v7Z" fill="#17756a" />
+                    <rect x="4" y="-7" width="45" height="8" rx="4" fill="#0f5a51" />
+                    <g class="cw-f-lean">
+                    <g class="cw-bob amb">
+                      <rect x="-45" y="-134" width="90" height="90" rx="34" fill="#2f9a8a" />
+                      <path d="M-45-84q45 20 90 0v6a34 34 0 0 1-34 34h-22a34 34 0 0 1-34-34Z" fill="#23877a" opacity=".6" />
+                      <rect x="-24" y="-104" width="48" height="42" rx="12" fill="#fdf8ee" stroke="#17756a" stroke-width="2.5" />
+                      <circle cx="0" cy="-82" r="11.500" fill="#e7bd4f" stroke="#a8842d" stroke-width="1.6" />
+                      <path d="M0-92L2.800-84.800L10-82L2.800-79.200L0-72L-2.800-79.200L-10-82L-2.800-84.800Z" fill="#fffdf6" />
+                      <!-- capelet -->
+                      <path d="M-56-130Q0-150 56-130L62-104Q32-94 0-101Q-32-94-62-104Z" fill="#dcc070" stroke="#b8963f" stroke-width="2" stroke-linejoin="round" />
+                      <path d="M-30-139L-35-99M0-141V-101M30-139L35-99" fill="none" stroke="#b8963f" stroke-width="1.6" opacity=".7" />
+                      <rect x="-12" y="-142" width="24" height="14" rx="4" fill="#17756a" />
+                      <!-- head -->
+                      <g class="cw-f-head">
+                        <circle cx="-66" cy="-186" r="14" fill="#e7bd4f" stroke="#a8842d" stroke-width="2" /><circle cx="-66" cy="-186" r="6" fill="#b8963f" />
+                        <circle cx="66" cy="-186" r="14" fill="#e7bd4f" stroke="#a8842d" stroke-width="2" /><circle cx="66" cy="-186" r="6" fill="#b8963f" />
+                        <rect x="-64" y="-240" width="128" height="108" rx="48" fill="#2f9a8a" />
+                        <path d="M-64-176v-16a48 48 0 0 1 48-48h32a48 48 0 0 1 48 48v16Z" fill="#3aa897" opacity=".55" />
+                        <rect x="-50" y="-214" width="100" height="70" rx="32" fill="#fdf8ee" />
+                        <g class="cw-f-eyes">
+                          <g class="cw-eyes-open">
+                            <g class="cw-blink amb">
+                              <ellipse cx="-24" cy="-182" rx="10" ry="13" fill="#242b2b" /><circle cx="-27.500" cy="-187.500" r="3.800" fill="#fff" /><circle cx="-20" cy="-176.500" r="1.800" fill="#fff" />
+                              <ellipse cx="24" cy="-182" rx="10" ry="13" fill="#242b2b" /><circle cx="20.500" cy="-187.500" r="3.800" fill="#fff" /><circle cx="28" cy="-176.500" r="1.800" fill="#fff" />
+                            </g>
+                          </g>
+                          <path class="cw-eyes-happy" d="M-35-179q11-13 22 0M13-179q11-13 22 0" fill="none" stroke="#242b2b" stroke-width="4.600" stroke-linecap="round" />
+                          <path class="cw-eyes-sleep" d="M-35-182q11 10 22 0M13-182q11 10 22 0" fill="none" stroke="#242b2b" stroke-width="4.200" stroke-linecap="round" />
+                        </g>
+                        <ellipse cx="-40" cy="-163" rx="8" ry="5" fill="#f0a898" opacity=".8" /><ellipse cx="40" cy="-163" rx="8" ry="5" fill="#f0a898" opacity=".8" />
+                        <path class="cw-mouth cw-m-smile" d="M-9-162q9 9 18 0" fill="none" stroke="#242b2b" stroke-width="3.400" stroke-linecap="round" />
+                        <ellipse class="cw-mouth cw-m-o" cx="0" cy="-158" rx="5" ry="6" fill="#7a2f2a" />
+                        <ellipse class="cw-mouth cw-m-zz" cx="1" cy="-159" rx="3.400" ry="4" fill="#7a2f2a" />
+                        <g class="cw-mouth cw-m-grin"><path d="M-12-164q12 17 24 0Z" fill="#242b2b" stroke="#242b2b" stroke-width="2.400" stroke-linejoin="round" /><path d="M-5-156.500q5-3 10 0q-5 4-10 0Z" fill="#e2725b" /></g>
+                        <!-- deerstalker -->
+                        <g transform="rotate(-4 0 -240)">
+                          <path d="M-66-218C-68-258-40-281 0-281C40-281 68-258 66-218Z" fill="#dcc070" stroke="#b8963f" stroke-width="2" />
+                          <path d="M0-281V-218M-30-276C-40-258-43-238-42-218M30-276C40-258 43-238 42-218" fill="none" stroke="#b8963f" stroke-width="1.700" opacity=".75" />
+                          <path d="M-14-262l28 0M-38-246l18-6M20-252l18 6M-52-228l14-4M38-232l14 4" fill="none" stroke="#c9a851" stroke-width="3" stroke-linecap="round" opacity=".8" />
+                          <path d="M-66-219C-73-250-54-271-27-279C-41-259-47-239-48-219Z" fill="#c9a851" stroke="#b8963f" stroke-width="1.500" />
+                          <path d="M66-219C73-250 54-271 27-279C41-259 47-239 48-219Z" fill="#c9a851" stroke="#b8963f" stroke-width="1.500" />
+                          <path d="M-68-222Q0-196 68-222Q0-243-68-222Z" fill="#b8963f" stroke="#a8842d" stroke-width="1.500" stroke-linejoin="round" />
+                          <path d="M-52-225Q0-238 52-225" fill="none" stroke="#dcc070" stroke-width="2" stroke-linecap="round" opacity=".8" />
+                          <path d="M0-282C-11-296-21-289-17-280C-14-274-5-277 0-282ZM0-282C11-296 21-289 17-280C14-274 5-277 0-282Z" fill="#c8664f" stroke="#8f4535" stroke-width="1.500" stroke-linejoin="round" />
+                          <circle cx="0" cy="-282" r="3.600" fill="#8f4535" />
+                        </g>
+                      </g>
+                      <!-- dozing while Interpreter works -->
+                      <g class="cw-zz cw-vis" data-on="4 5">
+                        <text class="cw-z amb" x="74" y="-258" font-size="22">z</text>
+                        <text class="cw-z amb" style="animation-delay:-1.2s" x="92" y="-282" font-size="29">z</text>
+                      </g>
+                      <!-- right arm (book side): pointing / thumbs-up / needle -->
+                      <g class="cw-f-armR">
+                        <g class="cw-f-armR-amb amb">
+                        <g class="cw-vis" data-on="2">
+                          <g transform="rotate(125 48 -58)"><rect x="42.500" y="-84" width="12" height="22" rx="6" fill="#bfe5dc" stroke="#17756a" stroke-width="2.500" /></g>
+                        </g>
+                        <g class="cw-vis" data-on="3">
+                          <path class="cw-only-m" d="M48 3c9 9 19 1 14-8c-4-7-15-3-12 5c4 10 20 9 27 0" fill="none" stroke="#d9a93a" stroke-width="3" stroke-linecap="round" />
+                          <path d="M48-50V4" stroke="#5f6f6e" stroke-width="5.500" stroke-linecap="round" />
+                          <path d="M48-50V3" stroke="#e3eae9" stroke-width="2.600" stroke-linecap="round" />
+                          <ellipse cx="48" cy="1" rx="1.300" ry="3.200" fill="#5f6f6e" />
+                        </g>
+                        <path d="M48-114V-64" stroke="#1f7f72" stroke-width="17" stroke-linecap="round" />
+                        <circle cx="48" cy="-58" r="12.500" fill="#bfe5dc" stroke="#17756a" stroke-width="2.500" />
+                      </g>
+                      </g>
+                      <!-- left arm: magnifier -->
+                      <g class="cw-f-armL">
+                        <g class="cw-f-armL-amb amb">
+                        <path d="M-48-114V-64" stroke="#1f7f72" stroke-width="17" stroke-linecap="round" />
+                        <g class="cw-f-mag">
+                          <path d="M-48-50V-30" stroke="#7b5230" stroke-width="9.500" stroke-linecap="round" />
+                          <circle cx="-48" cy="-8" r="24" fill="url(#cw-lens)" stroke="#a8842d" stroke-width="9" />
+                          <circle cx="-48" cy="-8" r="24" fill="none" stroke="#efc75e" stroke-width="5.500" />
+                          <g class="cw-f-lenseye cw-vis" data-on="1">
+                            <circle cx="-48" cy="-8" r="20" fill="#fdf8ee" />
+                            <ellipse cx="-46" cy="-8" rx="12.500" ry="16" fill="#242b2b" /><circle cx="-50.500" cy="-14.500" r="4.800" fill="#fff" /><circle cx="-41" cy="-1" r="2.300" fill="#fff" />
+                          </g>
+                          <path class="cw-lens-shine" d="M-63-15a17 17 0 0 1 12-10" fill="none" stroke="#fff" stroke-width="3.500" stroke-linecap="round" opacity=".95" />
+                        </g>
+                        <circle cx="-48" cy="-58" r="12.500" fill="#bfe5dc" stroke="#17756a" stroke-width="2.500" />
+                      </g>
+                      </g>
+                    </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+
+              <!-- desktop only: the sewing thread runs from the packet to Finder's needle -->
+              <g class="cw-strip cw-only-d">
+                <g class="cw-vis cw-late" data-on="3">
+                  <path class="cw-thread cw-needle-thread amb" d="M-14 22.500C-42 40 -55 110 -56 190S-62 280 -66.900 301.400" />
+                </g>
+              </g>
+
+              <!-- ======== Interpreter ======== -->
+              <g class="cw-interp">
+                <g class="cw-bot">
+                  <ellipse class="cw-only-m" cx="0" cy="5" rx="120" ry="20" fill="url(#cw-desk)" />
+                  <ellipse cx="0" cy="3" rx="70" ry="10" fill="url(#cw-contact)" />
+                  <g class="cw-hop">
+                    <rect x="-33" y="-54" width="17" height="36" rx="6" fill="#c0634d" />
+                    <rect x="16" y="-54" width="17" height="36" rx="6" fill="#c0634d" />
+                    <path d="M-47-3v-7q0-16 18-16h8q15 0 15 15v8Z" fill="#b65b46" />
+                    <rect x="-49" y="-7" width="45" height="8" rx="4" fill="#8f4535" />
+                    <path d="M6-3v-8q0-15 15-15h8q18 0 18 16v7Z" fill="#b65b46" />
+                    <rect x="4" y="-7" width="45" height="8" rx="4" fill="#8f4535" />
+                    <g class="cw-i-lean">
+                    <g class="cw-bob amb">
+                      <rect x="-45" y="-134" width="90" height="90" rx="34" fill="#dd7a62" />
+                      <path d="M-45-84q45 20 90 0v6a34 34 0 0 1-34 34h-22a34 34 0 0 1-34-34Z" fill="#c8664f" opacity=".6" />
+                      <rect x="-12" y="-142" width="24" height="14" rx="4" fill="#b65b46" />
+                      <!-- head -->
+                      <g class="cw-i-head">
+                        <g class="cw-antenna amb">
+                          <path d="M0-238V-268" stroke="#b65b46" stroke-width="4.500" stroke-linecap="round" />
+                          <g class="cw-pop cw-bulb" data-on="4" style="--pd:2.9s">
+                            <circle cx="0" cy="-275" r="21" fill="#ffe27a" opacity=".5" filter="url(#cw-blur)" />
+                            <path d="M0-303v-10M-20-295l-7-7M20-295l7-7M-28-275h-10M28-275h10" fill="none" stroke="#e9b93f" stroke-width="4" stroke-linecap="round" />
+                          </g>
+                          <circle class="cw-ant-ball" cx="0" cy="-275" r="8.500" stroke="#a8842d" stroke-width="2" />
+                        </g>
+                        <circle cx="-66" cy="-186" r="14" fill="#e7bd4f" stroke="#a8842d" stroke-width="2" /><circle cx="-66" cy="-186" r="6" fill="#b8963f" />
+                        <circle cx="66" cy="-186" r="14" fill="#e7bd4f" stroke="#a8842d" stroke-width="2" /><circle cx="66" cy="-186" r="6" fill="#b8963f" />
+                        <rect x="-64" y="-240" width="128" height="108" rx="48" fill="#dd7a62" />
+                        <path d="M-64-176v-16a48 48 0 0 1 48-48h32a48 48 0 0 1 48 48v16Z" fill="#e88f78" opacity=".6" />
+                        <rect x="-50" y="-216" width="100" height="72" rx="32" fill="#fdf8ee" />
+                        <circle cx="-25" cy="-182" r="21" fill="#e9f3f1" /><circle cx="25" cy="-182" r="21" fill="#e9f3f1" />
+                        <g class="cw-i-eyes">
+                          <g class="cw-eyes-open">
+                            <g class="cw-blink amb" style="animation-delay:-1.3s">
+                              <ellipse cx="-25" cy="-182" rx="8.500" ry="11" fill="#242b2b" /><circle cx="-28" cy="-186.500" r="3.200" fill="#fff" />
+                              <ellipse cx="25" cy="-182" rx="8.500" ry="11" fill="#242b2b" /><circle cx="22" cy="-186.500" r="3.200" fill="#fff" />
+                            </g>
+                          </g>
+                          <path class="cw-eyes-happy" d="M-35-179q10-12 20 0M15-179q10-12 20 0" fill="none" stroke="#242b2b" stroke-width="4.400" stroke-linecap="round" />
+                        </g>
+                        <circle cx="-25" cy="-182" r="21" fill="none" stroke="#1d4f4a" stroke-width="5" />
+                        <circle cx="25" cy="-182" r="21" fill="none" stroke="#1d4f4a" stroke-width="5" />
+                        <path d="M-4.500-184q4.500-5 9 0M-46-186l-8-4M46-186l8-4" fill="none" stroke="#1d4f4a" stroke-width="4.500" stroke-linecap="round" />
+                        <path class="cw-glint amb" d="M-38-192l8-9M12-192l8-9" stroke="#fff" stroke-width="3.500" stroke-linecap="round" opacity=".95" />
+                        <ellipse cx="-43" cy="-157" rx="7" ry="4.500" fill="#f0a898" opacity=".85" /><ellipse cx="43" cy="-157" rx="7" ry="4.500" fill="#f0a898" opacity=".85" />
+                        <path class="cw-mouth cw-m-smile" d="M-8-157q8 8 16 0" fill="none" stroke="#242b2b" stroke-width="3.400" stroke-linecap="round" />
+                        <ellipse class="cw-mouth cw-m-o" cx="0" cy="-154" rx="4.500" ry="5.500" fill="#7a2f2a" />
+                        <path class="cw-mouth cw-m-hm" d="M-6-156q7 3.500 13-1" fill="none" stroke="#242b2b" stroke-width="3.400" stroke-linecap="round" />
+                        <g class="cw-mouth cw-m-grin"><path d="M-11-160q11 16 22 0Z" fill="#242b2b" stroke="#242b2b" stroke-width="2.400" stroke-linejoin="round" /><path d="M-4.500-153q4.500-3 9 0q-4.500 4-9 0Z" fill="#e2725b" /></g>
+                      </g>
+                      <!-- bow tie -->
+                      <path d="M0-131l-15-8v16ZM0-131l15-8v16Z" fill="#17756a" stroke="#0f5a51" stroke-width="1.500" stroke-linejoin="round" /><circle cx="0" cy="-131" r="4" fill="#0f5a51" />
+                      <!-- clipboard: held up large for the self-check -->
+                      <g class="cw-clip">
+                        <rect x="-12" y="-124" width="72" height="72" rx="7" fill="#17756a" stroke="#0f5a51" stroke-width="2" />
+                        <rect x="-6" y="-117" width="60" height="59" rx="3" fill="#fffdf6" />
+                        <rect x="13" y="-130" width="22" height="10" rx="3.500" fill="#e7bd4f" stroke="#a8842d" stroke-width="1.600" />
+                        <g class="cw-clip-rows">
+                          <g class="cw-row" style="--rd:0.8s"><circle class="cw-row-dot" cx="3" cy="-104" r="4" /><path class="cw-row-line" d="M12 -104H46" /><rect class="cw-row-box" x="-2.500" y="-109.5" width="11" height="11" rx="2.500" /><text class="cw-row-id" x="14" y="-100">[12]</text><path class="cw-row-tick cw-pop" data-on="5 6" style="--pd:0.8s" d="M-1 -104l3.500 4l7-8.500" /></g><g class="cw-row" style="--rd:1.9s"><circle class="cw-row-dot" cx="3" cy="-89" r="4" /><path class="cw-row-line" d="M12 -89H40" /><rect class="cw-row-box" x="-2.500" y="-94.5" width="11" height="11" rx="2.500" /><text class="cw-row-id" x="14" y="-85">[87]</text><path class="cw-row-tick cw-pop" data-on="5 6" style="--pd:1.9s" d="M-1 -89l3.500 4l7-8.500" /></g><g class="cw-row" style="--rd:3.1s"><circle class="cw-row-dot" cx="3" cy="-74" r="4" /><path class="cw-row-line" d="M12 -74H44" /><rect class="cw-row-box" x="-2.500" y="-79.5" width="11" height="11" rx="2.500" /><text class="cw-row-id" x="14" y="-70">[203]</text><path class="cw-row-tick cw-pop" data-on="5 6" style="--pd:3.1s" d="M-1 -74l3.500 4l7-8.500" /></g>
+                        </g>
+                      </g>
+                      <path d="M50-116q22 12 9 32" fill="none" stroke="#c8664f" stroke-width="17" stroke-linecap="round" />
+                      <circle cx="58" cy="-82" r="12.500" fill="#f9d5c9" stroke="#b65b46" stroke-width="2.500" />
+                      <!-- pencil arm (book side) -->
+                      <g class="cw-i-arm">
+                        <g class="cw-i-arm-amb amb">
+                        <path d="M-48-114V-64" stroke="#c8664f" stroke-width="17" stroke-linecap="round" />
+                        <g class="cw-i-pencil">
+                          <rect x="-53" y="-70" width="10" height="10" rx="2" fill="#f0a898" stroke="#b65b46" stroke-width="1.400" />
+                          <rect x="-53" y="-60" width="10" height="40" fill="#efc75e" stroke="#a8842d" stroke-width="1.400" />
+                          <path d="M-53-20L-48-6L-43-20Z" fill="#f6e3c3" stroke="#a8842d" stroke-width="1.400" stroke-linejoin="round" />
+                          <path d="M-50-11.500L-48-6L-46-11.500Z" fill="#242b2b" />
+                        </g>
+                        <circle cx="-48" cy="-58" r="12.500" fill="#f9d5c9" stroke="#b65b46" stroke-width="2.500" />
+                      </g>
+                      </g>
+                    </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+
+              <!-- ======== the claim slip ======== -->
+              <g class="cw-claim">
+                <g class="cw-claim-drop"><g class="cw-claim-sway amb">
+                  <path d="M85-40V4" stroke="#d9a93a" stroke-width="2.600" />
+                  <g filter="url(#cw-sh-sm)">
+                    <rect x="0" y="0" width="170" height="82" rx="11" fill="#fffdf6" stroke="#d9cfb4" stroke-width="2" />
+                    <path d="M0 28V11a11 11 0 0 1 11-11H159a11 11 0 0 1 11 11V28Z" fill="#17756a" />
+                  </g>
+                  <text x="85" y="21" font-size="19" font-weight="800" fill="#fff" text-anchor="middle" letter-spacing="2.500">CLAIM</text>
+                  <!-- Leon + key -> attic door -->
+                  <circle cx="19" cy="55" r="10" fill="#eec4a0" /><path d="M9 55Q8 42 19 42Q30 42 29 55Q26 48 19 49Q12 48 9 55Z" fill="#2b3a3a" />
+                  <path d="M8 74q11-12 22 0Z" fill="#4a6068" />
+                  <use href="#cw-key" transform="translate(52 50) scale(.5)" />
+                  <path d="M38 64h14" stroke="#17756a" stroke-width="2.600" stroke-linecap="round" marker-end="url(#cw-arrow)" />
+                  <path d="M62 74V50a10 10 0 0 1 20 0V74Z" fill="#17756a" stroke="#b8963f" stroke-width="3" stroke-linejoin="round" />
+                  <circle cx="77" cy="62" r="2.400" fill="#efc75e" />
+                  <!-- verdict slot -->
+                  <g class="cw-verdict">
+                    <g class="cw-vis" data-on="0 1 2 3"><circle cx="128" cy="55" r="19" fill="#fcf0ec" stroke="#e8b3a4" stroke-width="2" /><text x="128" y="66" font-size="31" font-weight="800" fill="#c0634d" text-anchor="middle">?</text></g>
+                    <g class="cw-vis" data-on="4"><rect x="92" y="38" width="72" height="34" rx="17" fill="#fcf0ec" stroke="#c0634d" stroke-width="2.400" stroke-dasharray="5 4" /><text x="128" y="62" font-size="19" font-weight="800" fill="#c0634d" text-anchor="middle">TRUE?</text></g>
+                    <g class="cw-vis" data-on="5"><rect x="92" y="38" width="72" height="34" rx="17" fill="#eaf4f0" stroke="#17756a" stroke-width="2.400" /><text x="128" y="62" font-size="19" font-weight="800" fill="#17756a" text-anchor="middle">TRUE</text></g>
+                    <g class="cw-vis" data-on="6"><rect x="92" y="38" width="72" height="34" rx="17" fill="#17756a" /><text x="128" y="62" font-size="19" font-weight="800" fill="#fff" text-anchor="middle">TRUE</text></g>
+                  </g>
+                </g></g>
+              </g>
+
+              <!-- sparkles for the finale -->
+              <g class="cw-vis" data-on="6">
+                <g transform="translate(458 162) scale(1.1)"><path class="cw-spark amb" style="animation-delay:0s" d="M0-10C1.2-3 3-1.2 10 0C3 1.2 1.2 3 0 10C-1.2 3-3 1.2-10 0C-3-1.2-1.2-3 0-10Z" fill="#efc75e"/></g><g transform="translate(214 136) scale(0.9)"><path class="cw-spark amb" style="animation-delay:-0.7s" d="M0-10C1.2-3 3-1.2 10 0C3 1.2 1.2 3 0 10C-1.2 3-3 1.2-10 0C-3-1.2-1.2-3 0-10Z" fill="#efc75e"/></g><g transform="translate(330 246) scale(0.7)"><path class="cw-spark amb" style="animation-delay:-1.2s" d="M0-10C1.2-3 3-1.2 10 0C3 1.2 1.2 3 0 10C-1.2 3-3 1.2-10 0C-3-1.2-1.2-3 0-10Z" fill="#f3b7a6"/></g>
+                <g class="cw-only-m"><g transform="translate(176 560) scale(0.8)"><path class="cw-spark amb" style="animation-delay:-0.4s" d="M0-10C1.2-3 3-1.2 10 0C3 1.2 1.2 3 0 10C-1.2 3-3 1.2-10 0C-3-1.2-1.2-3 0-10Z" fill="#7cc9ba"/></g><g transform="translate(372 548) scale(0.7)"><path class="cw-spark amb" style="animation-delay:-1.1s" d="M0-10C1.2-3 3-1.2 10 0C3 1.2 1.2 3 0 10C-1.2 3-3 1.2-10 0C-3-1.2-1.2-3 0-10Z" fill="#efc75e"/></g><g transform="translate(640 560) scale(0.7)"><path class="cw-spark amb" style="animation-delay:-0.2s" d="M0-10C1.2-3 3-1.2 10 0C3 1.2 1.2 3 0 10C-1.2 3-3 1.2-10 0C-3-1.2-1.2-3 0-10Z" fill="#efc75e"/></g><g transform="translate(832 548) scale(0.8)"><path class="cw-spark amb" style="animation-delay:-0.9s" d="M0-10C1.2-3 3-1.2 10 0C3 1.2 1.2 3 0 10C-1.2 3-3 1.2-10 0C-3-1.2-1.2-3 0-10Z" fill="#f3b7a6"/></g></g>
+                <g class="cw-only-d"><g transform="translate(-8 262) scale(0.8)"><path class="cw-spark amb" style="animation-delay:-0.4s" d="M0-10C1.2-3 3-1.2 10 0C3 1.2 1.2 3 0 10C-1.2 3-3 1.2-10 0C-3-1.2-1.2-3 0-10Z" fill="#7cc9ba"/></g><g transform="translate(170 292) scale(0.7)"><path class="cw-spark amb" style="animation-delay:-1.6s" d="M0-10C1.2-3 3-1.2 10 0C3 1.2 1.2 3 0 10C-1.2 3-3 1.2-10 0C-3-1.2-1.2-3 0-10Z" fill="#efc75e"/></g><g transform="translate(1006 270) scale(0.8)"><path class="cw-spark amb" style="animation-delay:-0.9s" d="M0-10C1.2-3 3-1.2 10 0C3 1.2 1.2 3 0 10C-1.2 3-3 1.2-10 0C-3-1.2-1.2-3 0-10Z" fill="#f3b7a6"/></g><g transform="translate(832 300) scale(0.7)"><path class="cw-spark amb" style="animation-delay:-0.2s" d="M0-10C1.2-3 3-1.2 10 0C3 1.2 1.2 3 0 10C-1.2 3-3 1.2-10 0C-3-1.2-1.2-3 0-10Z" fill="#efc75e"/></g></g>
+              </g>
+            </svg>
             <span class="cast-stamp" id="cast-stamp">A whole story</span>
           </div>
           <div class="cast-labels">
             <div>
-              <strong>The narrative</strong
-              ><span>Paragraph-indexed source</span>
+              <svg class="cast-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                <path d="M3 9q7-3 13 1q6-4 13-1v16q-7-3-13 1q-6-4-13-1Z" fill="#fffaf0" stroke="#17756a" stroke-width="2.400" stroke-linejoin="round" />
+                <path d="M16 10v16" stroke="#17756a" stroke-width="2" /><path d="M7 14q3-1 6 0M7 18q3-1 6 0M19 14q3-1 6 0M19 18q3-1 6 0" stroke="#d7ba67" stroke-width="1.800" fill="none" stroke-linecap="round" />
+              </svg>
+              <p><strong>The narrative</strong><span>Paragraph-indexed source</span></p>
             </div>
-            <div><strong>Finder</strong><span>Evidence selection</span></div>
             <div>
-              <strong>Interpreter</strong><span>Grounded reasoning</span>
+              <svg class="cast-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                <rect x="4" y="9" width="24" height="20" rx="9" fill="#2f9a8a" /><rect x="7" y="14" width="18" height="12" rx="6" fill="#fdf8ee" />
+                <ellipse cx="12.500" cy="20" rx="1.900" ry="2.500" fill="#242b2b" /><ellipse cx="19.500" cy="20" rx="1.900" ry="2.500" fill="#242b2b" />
+                <path d="M3.500 14C3.500 6 9 2.500 16 2.500S28.500 6 28.500 14Z" fill="#d7ba67" stroke="#b8963f" stroke-width="1.200" /><path d="M3 14q13 4 26 0" stroke="#b8963f" stroke-width="2.400" fill="none" stroke-linecap="round" />
+              </svg>
+              <p><strong>Finder</strong><span>Evidence selection</span></p>
+            </div>
+            <div>
+              <svg class="cast-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                <path d="M16 8V3.500" stroke="#b65b46" stroke-width="2" stroke-linecap="round" /><circle cx="16" cy="3.200" r="2.200" fill="#efc75e" />
+                <rect x="4" y="8" width="24" height="21" rx="9" fill="#dd7a62" /><rect x="7" y="12" width="18" height="13" rx="6" fill="#fdf8ee" />
+                <circle cx="12" cy="18.500" r="4" fill="none" stroke="#1d4f4a" stroke-width="1.800" /><circle cx="20" cy="18.500" r="4" fill="none" stroke="#1d4f4a" stroke-width="1.800" />
+                <circle cx="12" cy="18.500" r="1.500" fill="#242b2b" /><circle cx="20" cy="18.500" r="1.500" fill="#242b2b" />
+              </svg>
+              <p><strong>Interpreter</strong><span>Grounded reasoning</span></p>
             </div>
           </div>
           <div

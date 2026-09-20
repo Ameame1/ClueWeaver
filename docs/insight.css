@@ -65,138 +65,6 @@
   width: 100%;
   background: white;
 }
-.cast-art {
-  position: relative;
-  width: 100%;
-  max-width: 680px;
-  aspect-ratio: 2.05;
-  margin: 24px auto 0;
-  overflow: hidden;
-  isolation: isolate;
-}
-.cast-piece {
-  position: absolute;
-  top: -14%;
-  left: 0;
-  width: 100%;
-  height: auto;
-  user-select: none;
-  pointer-events: none;
-}
-.cast-book {
-  clip-path: inset(0 58.5% 0 0);
-  transform-origin: 21% 81%;
-}
-.cast-finder {
-  clip-path: inset(0 27% 0 42%);
-  transform-origin: 57% 81%;
-}
-.cast-interpreter {
-  clip-path: inset(0 0 0 73%);
-  transform-origin: 86% 81%;
-}
-.cast-stamp {
-  position: absolute;
-  top: 1%;
-  left: 5%;
-  padding: 3px 9px;
-  border-bottom: 2px solid #b9d7cc;
-  background: #f1f8f5;
-  color: #326559;
-  font-size: 12px;
-  font-weight: 650;
-  white-space: nowrap;
-  transform: rotate(-3deg);
-  transition: left 0.5s ease;
-}
-.insight-scene[data-stage="1"] .cast-stamp,
-.insight-scene[data-stage="2"] .cast-stamp,
-.insight-scene[data-stage="3"] .cast-stamp {
-  left: 43%;
-}
-.insight-scene[data-stage="4"] .cast-stamp,
-.insight-scene[data-stage="5"] .cast-stamp,
-.insight-scene[data-stage="6"] .cast-stamp {
-  left: 73%;
-  color: #934b3d;
-  background: #fcf0ec;
-  border-color: #e8b3a4;
-}
-.cast-labels {
-  display: grid;
-  grid-template-columns: 42% 31% 27%;
-  max-width: 680px;
-  margin: 4px auto 24px;
-  text-align: center;
-  line-height: 1.4;
-}
-.cast-labels strong {
-  font-size: 17px;
-  font-weight: 750;
-}
-.cast-labels span {
-  display: block;
-  color: var(--muted);
-  font-size: 11px;
-  margin-top: 3px;
-}
-.cast-labels > div:nth-child(2) strong {
-  color: var(--accent);
-}
-.cast-labels > div:nth-child(3) strong {
-  color: var(--coral);
-}
-.flying-clue {
-  position: absolute;
-  z-index: 2;
-  left: 26%;
-  top: 10%;
-  display: grid;
-  place-items: center;
-  width: 37px;
-  height: 29px;
-  background: #fff1c8;
-  color: #6c5315;
-  border: 1px solid #debf6c;
-  border-radius: 2px;
-  box-shadow: 0 3px 0 #e9dab9;
-  font-size: 12px;
-  font-weight: 650;
-  opacity: 0;
-  pointer-events: none;
-}
-.insight-scene[data-stage="0"] .cast-book,
-.insight-scene[data-stage="1"] .cast-book {
-  animation: book-sway 3.5s ease-in-out infinite;
-}
-.insight-scene[data-stage="1"] .cast-finder,
-.insight-scene[data-stage="2"] .cast-finder,
-.insight-scene[data-stage="3"] .cast-finder {
-  animation: finder-bob 2.5s ease-in-out infinite;
-}
-.insight-scene[data-stage="4"] .cast-interpreter,
-.insight-scene[data-stage="5"] .cast-interpreter,
-.insight-scene[data-stage="6"] .cast-interpreter {
-  animation: interpreter-think 3s ease-in-out infinite;
-}
-.insight-scene[data-stage="1"] .flying-clue,
-.insight-scene[data-stage="2"] .flying-clue {
-  animation: find-clue 3.8s ease-in-out infinite;
-}
-.insight-scene[data-stage="3"] .flying-clue,
-.insight-scene[data-stage="4"] .flying-clue {
-  animation: pass-clue 3.8s ease-in-out infinite;
-}
-.insight-scene .flying-b {
-  animation-delay: -1.2s !important;
-}
-.insight-scene .flying-c {
-  animation-delay: -2.4s !important;
-}
-.insight-scene[data-playing="false"] .cast-piece,
-.insight-scene[data-playing="false"] .flying-clue {
-  animation-play-state: paused;
-}
 .insight-timeline {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
@@ -630,75 +498,6 @@
   color: var(--muted);
   margin: 0;
 }
-@keyframes book-sway {
-  0%,
-  100% {
-    transform: rotate(-0.8deg);
-  }
-  50% {
-    transform: rotate(0.8deg);
-  }
-}
-@keyframes finder-bob {
-  0%,
-  100% {
-    transform: translateY(0) rotate(-0.6deg);
-  }
-  50% {
-    transform: translateY(-6px) rotate(0.8deg);
-  }
-}
-@keyframes interpreter-think {
-  0%,
-  100% {
-    transform: rotate(0.6deg);
-  }
-  50% {
-    transform: rotate(-1.2deg) translateY(-3px);
-  }
-}
-@keyframes find-clue {
-  0% {
-    left: 27%;
-    top: 22%;
-    opacity: 0;
-    transform: rotate(-8deg);
-  }
-  15% {
-    opacity: 1;
-  }
-  65% {
-    top: 8%;
-    opacity: 1;
-  }
-  100% {
-    left: 52%;
-    top: 10%;
-    opacity: 0;
-    transform: rotate(7deg);
-  }
-}
-@keyframes pass-clue {
-  0% {
-    left: 55%;
-    top: 11%;
-    opacity: 0;
-    transform: rotate(-6deg);
-  }
-  15% {
-    opacity: 1;
-  }
-  60% {
-    top: 3%;
-    opacity: 1;
-  }
-  100% {
-    left: 82%;
-    top: 12%;
-    opacity: 0;
-    transform: rotate(8deg);
-  }
-}
 @media (max-width: 900px) {
   .claim-line {
     gap: 10px;
@@ -749,36 +548,6 @@
     width: 100%;
     font-size: 16px;
     text-align: left;
-  }
-  .cast-art {
-    margin-top: 22px;
-  }
-  .cast-stamp {
-    font-size: 9px;
-    padding: 2px 5px;
-  }
-  .insight-scene[data-stage="4"] .cast-stamp,
-  .insight-scene[data-stage="5"] .cast-stamp,
-  .insight-scene[data-stage="6"] .cast-stamp {
-    left: auto;
-    right: 2px;
-    transform: none;
-  }
-  .cast-labels {
-    margin-top: 7px;
-    margin-bottom: 20px;
-  }
-  .cast-labels strong {
-    font-size: 13px;
-  }
-  .cast-labels span {
-    font-size: 9px;
-    padding: 0 5px;
-  }
-  .flying-clue {
-    width: 28px;
-    height: 21px;
-    font-size: 9px;
   }
   .insight-timeline {
     gap: 5px;
@@ -851,12 +620,6 @@
   .insight-timeline button {
     font-size: 9px;
   }
-  .cast-stamp {
-    font-size: 8px;
-  }
-  .cast-labels strong {
-    font-size: 12px;
-  }
   .insight-explanation {
     min-height: 225px;
   }
@@ -874,7 +637,1736 @@
     animation: none !important;
     transition: none !important;
   }
-  .flying-clue {
+}
+
+/* ==========================================================================
+   Pop-up storybook theatre (inline SVG scene)
+   Each stage is a POSE under .insight-scene[data-stage="N"], reached through
+   transitions; ambient loops carry the class .amb and are the only thing
+   paused by [data-playing="false"].
+   ========================================================================== */
+.cast-art {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  margin: 18px auto 0;
+  overflow: hidden;
+  isolation: isolate;
+}
+.pop-stage {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  user-select: none;
+  pointer-events: none;
+}
+.pop-stage text {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- pose variables ---------------------------------------------------- */
+.insight-scene {
+  --cw-ease: cubic-bezier(0.55, 0.05, 0.2, 1);
+  --cw-card-s: 1;
+  --bot-y: 502px;
+  --bot-s: 0.88;
+  --f-x: 84px;
+  --f-armL: 35deg;
+  --f-wrist: 135deg;
+  --f-armR: -14deg;
+  --f-ex: 5px;
+  --f-ey: -4px;
+  --f-tilt: 0deg;
+  --f-lean: 0deg;
+  --f-slump: 0px;
+  --i-x: 918px;
+  --i-arm: 25deg;
+  --i-wrist: 150deg;
+  --i-ex: -5px;
+  --i-ey: -5px;
+  --i-tilt: 3deg;
+  --i-lean: 0deg;
+  --clip-s: 1;
+  --clip-ty: 0px;
+  --claim-x: 415px;
+  --claim-y: 12px;
+  --claim-s: 1.12;
+  --strip-x: 228px;
+  --k-x: 243px;
+  --k-y: 320px;
+  --k-r: 0deg;
+}
+.insight-scene[data-stage="1"] {
+  --f-x: 80px;
+  --f-armL: 155.7deg;
+  --f-wrist: 94.4deg;
+  --f-armR: -112deg;
+  --f-ex: 6px;
+  --f-ey: 0px;
+  --f-lean: 2deg;
+  --i-x: 922px;
+  --i-arm: 30deg;
+  --i-ex: -7px;
+  --i-ey: 0px;
+  --i-tilt: -5deg;
+  --claim-x: -16px;
+  --claim-y: 10px;
+  --claim-s: 1;
+}
+.insight-scene[data-stage="2"] {
+  --f-x: 82px;
+  --f-armL: 40deg;
+  --f-wrist: 125deg;
+  --f-armR: -125deg;
+  --f-ex: 6px;
+  --f-ey: 3px;
+  --f-tilt: 4deg;
+  --i-x: 930px;
+  --i-arm: 30deg;
+  --i-ex: -7px;
+  --i-ey: 4px;
+  --i-tilt: -8deg;
+  --i-lean: -5deg;
+  --claim-x: -16px;
+  --claim-y: 10px;
+  --claim-s: 1;
+}
+.insight-scene[data-stage="3"] {
+  --f-x: 92px;
+  --f-armL: 30deg;
+  --f-wrist: 140deg;
+  --f-armR: -165deg;
+  --f-ex: 4px;
+  --f-ey: -6px;
+  --f-tilt: -3deg;
+  --i-x: 926px;
+  --i-arm: 38deg;
+  --i-wrist: 128deg;
+  --i-ex: -5px;
+  --i-ey: -7px;
+  --i-tilt: 6deg;
+  --claim-x: -16px;
+  --claim-y: 10px;
+  --claim-s: 1;
+}
+.insight-scene[data-stage="4"] {
+  --f-x: 84px;
+  --f-armL: 8deg;
+  --f-wrist: 45deg;
+  --f-armR: -6deg;
+  --f-ex: 0px;
+  --f-ey: 1px;
+  --f-tilt: 9deg;
+  --f-lean: 2deg;
+  --f-slump: 6px;
+  --i-arm: 144deg;
+  --i-wrist: 0deg;
+  --i-ex: -7px;
+  --i-ey: -4px;
+  --i-tilt: -3deg;
+  --claim-x: 826px;
+  --claim-y: 10px;
+  --claim-s: 1;
+  --strip-x: 348px;
+  --k-x: 722px;
+  --k-y: 254px;
+  --k-r: 90deg;
+}
+.insight-scene[data-stage="5"] {
+  --f-x: 84px;
+  --f-armL: 8deg;
+  --f-wrist: 45deg;
+  --f-armR: -6deg;
+  --f-ex: 0px;
+  --f-ey: 1px;
+  --f-tilt: 9deg;
+  --f-lean: 2deg;
+  --f-slump: 6px;
+  --i-x: 926px;
+  --i-arm: 122deg;
+  --i-wrist: 42deg;
+  --i-ex: 2px;
+  --i-ey: 7px;
+  --i-tilt: 5deg;
+  --clip-s: 1.7;
+  --clip-ty: 22px;
+  --claim-x: 826px;
+  --claim-y: 10px;
+  --claim-s: 1;
+  --strip-x: 348px;
+  --k-x: 722px;
+  --k-y: 254px;
+  --k-r: 90deg;
+}
+.insight-scene[data-stage="6"] {
+  --f-x: 96px;
+  --f-armL: 152deg;
+  --f-wrist: 12deg;
+  --f-armR: -150deg;
+  --i-arm: 150deg;
+  --i-wrist: 30deg;
+  --i-tilt: 0deg;
+  --claim-x: 826px;
+  --claim-y: 10px;
+  --claim-s: 1;
+  --strip-x: 348px;
+  --k-x: 236px;
+  --k-y: 322px;
+  --k-r: -48deg;
+}
+
+/* ---- generic visibility helpers ---------------------------------------- */
+.cw-vis {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.cw-pop {
+  opacity: 0;
+  transform: scale(0.2);
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  transition:
+    transform 0.55s cubic-bezier(0.3, 1.7, 0.5, 1),
+    opacity 0.3s ease;
+}
+.insight-scene[data-stage="0"] [data-on~="0"],
+.insight-scene[data-stage="1"] [data-on~="1"],
+.insight-scene[data-stage="2"] [data-on~="2"],
+.insight-scene[data-stage="3"] [data-on~="3"],
+.insight-scene[data-stage="4"] [data-on~="4"],
+.insight-scene[data-stage="5"] [data-on~="5"],
+.insight-scene[data-stage="6"] [data-on~="6"] {
+  opacity: 1;
+}
+.insight-scene[data-stage="0"] .cw-pop[data-on~="0"],
+.insight-scene[data-stage="1"] .cw-pop[data-on~="1"],
+.insight-scene[data-stage="2"] .cw-pop[data-on~="2"],
+.insight-scene[data-stage="3"] .cw-pop[data-on~="3"],
+.insight-scene[data-stage="4"] .cw-pop[data-on~="4"],
+.insight-scene[data-stage="5"] .cw-pop[data-on~="5"],
+.insight-scene[data-stage="6"] .cw-pop[data-on~="6"] {
+  transform: scale(1);
+  transition-delay: var(--pd, 0s);
+}
+
+/* ---- pop-up world ------------------------------------------------------ */
+.cw-piece {
+  transform-origin: var(--ox, 500px) 366px;
+}
+.insight-scene[data-stage="0"] .cw-piece {
+  animation: cw-rise 0.9s cubic-bezier(0.3, 1.45, 0.5, 1) var(--d, 0s) backwards;
+}
+.cw-p41 {
+  transform-origin: 345px 366px;
+  transition:
+    transform 0.8s var(--cw-ease) 0.5s,
+    opacity 0.6s ease 0.5s;
+}
+.insight-scene:not([data-stage="0"]):not([data-stage="1"]) .cw-p41 {
+  transform: scaleY(0.16);
+  opacity: 0.5;
+}
+.cw-rain {
+  animation: cw-rain 0.9s linear infinite;
+}
+.cw-ship {
+  transform-origin: 434px 352px;
+  animation: cw-ship 3.6s ease-in-out infinite;
+}
+.cw-smoke {
+  animation: cw-smoke 3.6s ease-in-out infinite;
+}
+.cw-star {
+  animation: cw-twinkle 2.6s ease-in-out infinite;
+}
+.cw-clockhand {
+  transform-origin: 778px 252px;
+  animation: cw-spin 14s linear infinite;
+}
+.cw-door-leaf {
+  transform-origin: 217px 318px;
+  transition: transform 0.9s var(--cw-ease);
+}
+.cw-shackle {
+  transform-origin: 251px 310px;
+  transition: transform 0.4s ease;
+}
+.cw-padlock {
+  transition:
+    transform 0.5s ease-in,
+    opacity 0.4s ease;
+}
+.cw-rays {
+  opacity: 0;
+  transform-origin: 242px 316px;
+  transition: opacity 0.7s ease;
+  animation: cw-spin 40s linear infinite;
+}
+.insight-scene[data-stage="6"] .cw-door-leaf {
+  transform: scaleX(0.34) skewY(-18deg);
+  transition-delay: 1.15s;
+}
+.insight-scene[data-stage="6"] .cw-shackle {
+  transform: rotate(38deg);
+  transition-delay: 0.85s;
+}
+.insight-scene[data-stage="6"] .cw-padlock {
+  transform: translateY(34px);
+  opacity: 0;
+  transition-delay: 1s;
+}
+.insight-scene[data-stage="6"] .cw-rays {
+  opacity: 0.85;
+  transition-delay: 1.4s;
+}
+.cw-key-print {
+  transition: opacity 0.4s ease;
+}
+/* Reason / Self-check work from the packet: the book pages step back */
+.cw-pagedim {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.insight-scene[data-stage="4"] .cw-pagedim,
+.insight-scene[data-stage="5"] .cw-pagedim {
+  opacity: 0.62;
+}
+.insight-scene[data-stage="4"] .cw-slots[data-on],
+.insight-scene[data-stage="5"] .cw-slots[data-on] {
+  opacity: 0.4;
+}
+/* Input: how far apart the clues are */
+.cw-dist-bg {
+  fill: #fbf8ef;
+  stroke: #e2d6b8;
+  stroke-width: 1.5;
+}
+.cw-dist-text {
+  font-size: 15px;
+  font-weight: 700;
+  fill: #6c5315;
+  text-anchor: middle;
+}
+.insight-scene[data-stage="0"] .cw-dist {
+  transition-delay: 1.3s;
+}
+.insight-scene[data-stage="4"] .cw-p203-key,
+.insight-scene[data-stage="5"] .cw-p203-key {
+  opacity: 0;
+}
+
+/* ---- candidate windows ------------------------------------------------- */
+.insight-scene[data-stage="1"] .cw-frame,
+.insight-scene[data-stage="2"] .cw-frame {
+  transition-delay: var(--fd, 0s);
+}
+/* each window grows out of its anchor pin (and simply fades when leaving) */
+.cw-frame-grow {
+  transform-origin: var(--fo);
+  transform: scale(0.06);
+  transition: transform 0s linear 0.55s;
+}
+.insight-scene[data-stage="1"] .cw-frame-grow,
+.insight-scene[data-stage="2"] .cw-frame-grow {
+  transform: scale(1);
+  transition: transform 0.7s var(--cw-ease) var(--fd, 0s);
+}
+.cw-frame-box {
+  fill: #fff9e9;
+  fill-opacity: 0.1;
+  stroke: #d2a237;
+  stroke-width: 3;
+  stroke-dasharray: 11 8;
+  stroke-linecap: round;
+  transition:
+    stroke 0.4s ease,
+    fill 0.4s ease;
+}
+.cw-frame-bracket {
+  fill: none;
+}
+.cw-frame-more {
+  fill: none;
+  stroke: #d2a237;
+  stroke-width: 4;
+  stroke-linecap: round;
+  transition: stroke 0.4s ease;
+}
+.insight-scene[data-stage="1"] .cw-frame-box {
+  animation: cw-ants 1.1s linear infinite;
+}
+.insight-scene[data-stage="2"] .cw-frame-yes .cw-frame-box {
+  stroke: #2f9a8a;
+  fill: #eaf4f0;
+  fill-opacity: 0.08;
+}
+.insight-scene[data-stage="2"] .cw-frame-yes .cw-frame-more {
+  stroke: #2f9a8a;
+}
+.insight-scene[data-stage="2"] .cw-frame-yes .cw-frame-bracket {
+  fill: none;
+}
+.insight-scene[data-stage="2"] .cw-frame-no .cw-frame-box {
+  stroke: #c0634d;
+  fill: #fcf0ec;
+  fill-opacity: 0.5;
+}
+.cw-tag-text {
+  font-size: 21px;
+  font-weight: 800;
+  text-anchor: middle;
+  letter-spacing: 0.5px;
+}
+.cw-tag-verdict {
+  font-size: 19px;
+}
+/* Select: the window id slides aside and stays next to its YES / NO verdict */
+.cw-frame-id {
+  transition: transform 0.45s var(--cw-ease);
+}
+.insight-scene[data-stage="2"] .cw-frame-id {
+  transform: translateX(-25px);
+}
+.cw-pin {
+  transform-origin: 50% 100%;
+}
+.cw-ping {
+  fill: none;
+  stroke: #e0b64e;
+  stroke-width: 3.5;
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: cw-ping 1.8s ease-out infinite;
+}
+
+/* ---- clue cards -------------------------------------------------------- */
+.cw-card {
+  transform: translate(var(--hx), 380px);
+  transition:
+    transform 0.95s var(--cw-ease),
+    opacity 0.5s ease;
+}
+.cw-c12 {
+  --hx: 202px;
+}
+.cw-c41 {
+  --hx: 305px;
+}
+.cw-c86 {
+  --hx: 408px;
+}
+.cw-c87 {
+  --hx: 511px;
+}
+.cw-c88 {
+  --hx: 614px;
+}
+.cw-c203 {
+  --hx: 717px;
+}
+.cw-card-in {
+  transform: scale(var(--cw-card-s));
+  transform-origin: 40px 44px;
+  filter: drop-shadow(0 2px 2.5px rgba(29, 43, 42, 0.22));
+}
+.cw-card-bg {
+  fill: #fffdf6;
+  stroke: #d9cfb4;
+  stroke-width: 2.4;
+  transition:
+    fill 0.45s ease,
+    stroke 0.45s ease;
+}
+.cw-card-hole {
+  fill: #fff;
+  stroke: #cfc3a2;
+  stroke-width: 1.6;
+}
+.cw-card-rule {
+  stroke: #e2d8bd;
+  stroke-width: 1.6;
+  stroke-dasharray: 3 3;
+}
+.cw-card-id {
+  font-size: 21px;
+  font-weight: 800;
+  text-anchor: middle;
+  fill: #242b2b;
+  transition: fill 0.45s ease;
+}
+.insight-scene[data-stage="1"] .cw-card {
+  transform: translate(var(--hx), 372px);
+}
+.insight-scene[data-stage="1"] .cw-card-bg {
+  stroke: #d2a237;
+  fill: #fffbee;
+}
+/* Select onwards: colours carry the decision */
+.insight-scene:not([data-stage="0"]):not([data-stage="1"]) .cw-card[data-kind="keep"] .cw-card-bg {
+  fill: #e8f4ef;
+  stroke: #17756a;
+}
+.insight-scene:not([data-stage="0"]):not([data-stage="1"]) .cw-card[data-kind="keep"] .cw-card-id {
+  fill: #0f5a51;
+}
+.insight-scene:not([data-stage="0"]):not([data-stage="1"]) .cw-card[data-kind="ctx"] .cw-card-bg {
+  fill: #fff7e0;
+  stroke: #d2a237;
+}
+.insight-scene:not([data-stage="0"]):not([data-stage="1"]) .cw-card[data-kind="ctx"] .cw-card-id {
+  fill: #7a5c16;
+}
+.insight-scene:not([data-stage="0"]):not([data-stage="1"]) .cw-card[data-kind="drop"] .cw-card-bg {
+  fill: #f3f0ec;
+  stroke: #d9a192;
+}
+.insight-scene:not([data-stage="0"]):not([data-stage="1"]) .cw-card[data-kind="drop"] .cw-card-id {
+  fill: #9a8a84;
+}
+.insight-scene[data-stage="2"] .cw-card[data-kind="keep"] {
+  transform: translate(var(--hx), 364px);
+}
+.insight-scene[data-stage="2"] .cw-card[data-kind="ctx"] {
+  transform: translate(var(--hx), 374px);
+}
+/* the rejected [41] tab is dropped into the wastebasket beside the book */
+.insight-scene:not([data-stage="0"]):not([data-stage="1"]) .cw-c41 {
+  transform: translate(155px, 431px) rotate(9deg) scale(0.58);
+}
+.insight-scene[data-stage="2"] .cw-c41 {
+  transition-delay: 0.55s;
+}
+.insight-scene:not([data-stage="0"]):not([data-stage="1"]) .cw-c41 use {
+  opacity: 0.55;
+}
+.insight-scene:not([data-stage="0"]):not([data-stage="1"]) .cw-badge-layer.cw-c41 .cw-pop {
+  transform: scale(1.5);
+}
+.insight-scene[data-stage="2"] .cw-badge-layer.cw-c41 .cw-pop {
+  transition-delay: 1.2s;
+}
+.insight-scene[data-stage="2"] .cw-basket [data-on] {
+  transition-delay: 1.2s;
+}
+.cw-bin-text {
+  font-size: 15px;
+  font-weight: 800;
+  fill: #a0695c;
+  text-anchor: middle;
+}
+.insight-scene[data-stage="2"] .cw-c87 {
+  transform: translate(511px, 358px);
+}
+/* the duplicate [87] citation: S4 and S5 both cite it (x2), Pack slides it into the first one */
+.cw-dup {
+  opacity: 0;
+  transform: translate(520px, 410px) scale(0.4);
+  transition:
+    transform 0.8s var(--cw-ease),
+    opacity 0.35s ease;
+}
+.insight-scene[data-stage="2"] .cw-dup {
+  opacity: 1;
+  transform: translate(538px, 456px);
+  transition-delay: 1.15s;
+}
+.insight-scene[data-stage="3"] .cw-dup,
+.insight-scene[data-stage="4"] .cw-dup,
+.insight-scene[data-stage="5"] .cw-dup,
+.insight-scene[data-stage="6"] .cw-dup {
+  transform: translate(calc(var(--strip-x) + 176px), 8px) scale(0.6);
+}
+.insight-scene[data-stage="3"] .cw-dup {
+  transition:
+    transform 0.95s var(--cw-ease) 0.22s,
+    opacity 0.3s ease 1.05s;
+}
+.cw-dup-text {
+  font-size: 19px;
+  font-weight: 800;
+  fill: #0f5a51;
+  text-anchor: middle;
+}
+.cw-x2-text {
+  font-size: 14px;
+  font-weight: 800;
+  fill: #fff;
+  text-anchor: middle;
+}
+.cw-merge-text {
+  font-size: 15px;
+  font-weight: 800;
+  fill: #fff;
+  text-anchor: middle;
+}
+/* Pack onwards: narrative order on one thread */
+.insight-scene[data-stage="3"] .cw-card[style],
+.insight-scene[data-stage="4"] .cw-card[style],
+.insight-scene[data-stage="5"] .cw-card[style],
+.insight-scene[data-stage="6"] .cw-card[style] {
+  transform: translate(calc(var(--strip-x) + var(--slot) * 86px), 14px);
+}
+.insight-scene[data-stage="3"] .cw-card[style] {
+  transition-delay: calc(var(--slot) * 0.11s);
+}
+.insight-scene[data-stage="6"] .cw-card[data-kind="ctx"] {
+  opacity: 0.6;
+}
+.insight-scene[data-stage="6"] .cw-card[data-kind="keep"][style] .cw-card-bg {
+  stroke-width: 3.4;
+}
+.cw-slots {
+  transition-delay: 0.3s;
+}
+.insight-scene[data-stage="3"] .cw-late {
+  transition-delay: 0.95s;
+}
+.cw-query {
+  animation: cw-dots 0.9s linear infinite;
+}
+
+/* ---- the packet thread ------------------------------------------------- */
+.cw-strip {
+  transform: translate(var(--strip-x), 0);
+  transition: transform 0.95s var(--cw-ease);
+}
+.cw-thread {
+  fill: none;
+  stroke: #d9a93a;
+  stroke-width: 3.6;
+  stroke-linecap: round;
+  stroke-dasharray: 13 7;
+  animation: cw-thread 1.6s linear infinite;
+}
+.cw-budget-fill {
+  transform-box: fill-box;
+  transform-origin: 0 50%;
+}
+.insight-scene[data-stage="3"] .cw-budget-fill {
+  animation: cw-fill 1s var(--cw-ease) 1.2s backwards;
+}
+.cw-meter-text {
+  font-size: 20px;
+  font-weight: 750;
+  fill: #6c5315;
+}
+.cw-same-text {
+  font-size: 16px;
+  font-weight: 750;
+  fill: #934b3d;
+  text-anchor: middle;
+}
+.cw-needle-thread {
+  stroke-dasharray: 9 7;
+  stroke-width: 3;
+}
+.cw-cap rect {
+  fill: #fffaf3;
+  stroke: #e2a897;
+  stroke-width: 2;
+}
+.cw-cap-text {
+  font-size: 15px;
+  font-weight: 700;
+  fill: #7c3f33;
+  text-anchor: middle;
+}
+.cw-loop {
+  fill: none;
+  stroke: #c0634d;
+  stroke-width: 3;
+  stroke-dasharray: 3 9;
+  stroke-linecap: round;
+  animation: cw-loop 1.4s linear infinite;
+}
+
+/* ---- reasoning path + hero key ---------------------------------------- */
+.cw-path-dots {
+  stroke: #c0634d;
+  transition: stroke 0.6s ease;
+  animation: cw-dots 1.2s linear infinite;
+}
+/* Self-check: the same chain turns teal as it is verified */
+.insight-scene[data-stage="5"] .cw-path-dots,
+.insight-scene[data-stage="6"] .cw-path-dots {
+  stroke: #17756a;
+}
+.cw-link {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.insight-scene[data-stage="4"] .cw-link,
+.insight-scene[data-stage="5"] .cw-link {
+  opacity: 1;
+}
+.insight-scene[data-stage="4"] .cw-link {
+  transition-delay: var(--ld, 0s);
+}
+.cw-link-line {
+  stroke: #c0634d;
+  transition: stroke 0.6s ease;
+}
+.insight-scene[data-stage="5"] .cw-link-line {
+  stroke: #17756a;
+}
+.insight-scene[data-stage="6"] .cw-path-reveal {
+  opacity: 0.35;
+}
+.cw-path-reveal {
+  transition: opacity 0.5s ease;
+}
+.insight-scene[data-stage="4"] .cw-path-reveal {
+  animation: cw-reveal 2.4s ease-out backwards;
+}
+.cw-node-text {
+  font-size: 18px;
+  font-weight: 800;
+  fill: #fff;
+  text-anchor: middle;
+}
+.cw-scan {
+  opacity: 0;
+}
+.insight-scene[data-stage="5"] .cw-scan {
+  animation: cw-scan 3.2s ease-in-out infinite;
+}
+.cw-hero {
+  opacity: 0;
+  transform: translate(var(--k-x), var(--k-y)) rotate(var(--k-r));
+  transition:
+    transform 1s var(--cw-ease),
+    opacity 0.4s ease;
+}
+.insight-scene[data-stage="4"] .cw-hero,
+.insight-scene[data-stage="5"] .cw-hero,
+.insight-scene[data-stage="6"] .cw-hero {
+  opacity: 1;
+}
+.insight-scene[data-stage="4"] .cw-hero {
+  animation: cw-journey 2.8s var(--cw-ease) backwards;
+}
+.cw-hero-amb {
+  animation: cw-glow 2s ease-in-out infinite;
+}
+.cw-true {
+  opacity: 0;
+  transform: scale(0.1);
+  transform-origin: 258px 300px;
+  transition:
+    transform 0.6s cubic-bezier(0.3, 1.6, 0.5, 1),
+    opacity 0.3s ease;
+}
+.insight-scene[data-stage="6"] .cw-true {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 1.7s;
+}
+.cw-cites {
+  transition-delay: 0.2s;
+}
+.cw-cite-line {
+  animation: cw-dots 1.2s linear infinite reverse;
+}
+.cw-spark {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: cw-twinkle 1.8s ease-in-out infinite;
+}
+
+/* ---- robots ------------------------------------------------------------ */
+.cw-only-m {
+  display: none;
+}
+.cw-finder {
+  transform: translate(var(--f-x), var(--bot-y));
+  transition: transform 0.8s var(--cw-ease);
+}
+.cw-interp {
+  transform: translate(var(--i-x), var(--bot-y));
+  transition: transform 0.8s var(--cw-ease);
+}
+.cw-bot {
+  transform: scale(var(--bot-s));
+}
+/* whole-body acting: lean / slump from the hips, head tilt from the neck */
+.cw-f-lean {
+  transform-origin: 0 -50px;
+  transform: translateY(var(--f-slump)) rotate(var(--f-lean));
+  transition: transform 0.8s var(--cw-ease);
+}
+.cw-i-lean {
+  transform-origin: 0 -50px;
+  transform: rotate(var(--i-lean));
+  transition: transform 0.8s var(--cw-ease);
+}
+.cw-f-head {
+  transform-origin: 0 -138px;
+  transform: rotate(var(--f-tilt));
+  transition: transform 0.7s var(--cw-ease);
+}
+.cw-i-head {
+  transform-origin: 0 -138px;
+  transform: rotate(var(--i-tilt));
+  transition: transform 0.7s var(--cw-ease);
+}
+.cw-bob {
+  animation: cw-bob 3.2s ease-in-out infinite;
+}
+.cw-interp .cw-bob {
+  animation-delay: -1.4s;
+}
+.insight-scene[data-stage="1"] .cw-finder .cw-bob,
+.insight-scene[data-stage="2"] .cw-finder .cw-bob,
+.insight-scene[data-stage="3"] .cw-finder .cw-bob,
+.insight-scene[data-stage="4"] .cw-interp .cw-bob,
+.insight-scene[data-stage="5"] .cw-interp .cw-bob {
+  animation-duration: 1.5s;
+}
+.insight-scene[data-stage="4"] .cw-finder .cw-bob,
+.insight-scene[data-stage="5"] .cw-finder .cw-bob {
+  animation-duration: 4.4s;
+}
+/* the needle thread breathes with Finder so thread and needle stay together */
+.insight-scene[data-stage="3"] .cw-needle-thread {
+  animation:
+    cw-thread 1.6s linear infinite,
+    cw-bob 1.5s ease-in-out infinite;
+}
+.cw-z {
+  font-weight: 800;
+  fill: #2f9a8a;
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: cw-zz 2.6s ease-in-out infinite;
+}
+.cw-clip {
+  transform-origin: 56px -88px;
+  transform: translateY(var(--clip-ty)) rotate(5deg) scale(var(--clip-s));
+  transition: transform 0.7s cubic-bezier(0.3, 1.35, 0.5, 1);
+}
+.cw-row-box {
+  fill: #fffdf6;
+  stroke: #9db8b0;
+  stroke-width: 1.4;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.insight-scene[data-stage="5"] .cw-row-box {
+  opacity: 1;
+  transition-delay: 0.35s;
+}
+.insight-scene[data-stage="5"] .cw-row-dot {
+  opacity: 0;
+}
+.cw-row-id {
+  font-size: 11px;
+  font-weight: 800;
+  fill: #242b2b;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.insight-scene[data-stage="5"] .cw-row-id {
+  opacity: 1;
+  transition-delay: 0.35s;
+}
+.insight-scene[data-stage="5"] .cw-row-line {
+  opacity: 0;
+}
+.cw-ant-ball {
+  fill: #efc75e;
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  transition:
+    transform 0.4s cubic-bezier(0.3, 1.7, 0.5, 1),
+    fill 0.4s ease;
+}
+.insight-scene[data-stage="4"] .cw-ant-ball {
+  fill: #ffe27a;
+  transform: scale(1.35);
+  transition-delay: 2.9s;
+}
+.cw-f-armL {
+  transform-origin: -48px -114px;
+  transform: rotate(var(--f-armL));
+  transition: transform 0.75s var(--cw-ease);
+}
+.cw-f-mag {
+  transform-origin: -48px -58px;
+  transform: rotate(var(--f-wrist));
+  transition: transform 0.75s var(--cw-ease);
+}
+.cw-f-lenseye {
+  transform-origin: -48px -8px;
+  transform: rotate(109.9deg);
+}
+.cw-f-armR {
+  transform-origin: 48px -114px;
+  transform: rotate(var(--f-armR));
+  transition: transform 0.75s var(--cw-ease);
+}
+.cw-i-arm {
+  transform-origin: -48px -114px;
+  transform: rotate(var(--i-arm));
+  transition: transform 0.75s var(--cw-ease);
+}
+.cw-i-pencil {
+  transform-origin: -48px -58px;
+  transform: rotate(var(--i-wrist));
+  transition: transform 0.75s var(--cw-ease);
+}
+/* small working gestures layered on top of the arm poses */
+.cw-f-armR-amb {
+  transform-origin: 48px -114px;
+}
+.cw-f-armL-amb,
+.cw-i-arm-amb {
+  transform-origin: -48px -114px;
+}
+.insight-scene[data-stage="1"] .cw-f-armR-amb {
+  --wig: 5deg;
+  animation: cw-wiggle 1.5s ease-in-out infinite;
+}
+.insight-scene[data-stage="2"] .cw-f-armL-amb {
+  --wig: 7deg;
+  animation: cw-wiggle 2.2s ease-in-out infinite;
+}
+.insight-scene[data-stage="4"] .cw-i-arm-amb {
+  --wig: 6deg;
+  animation: cw-wiggle 1.4s ease-in-out infinite;
+}
+.insight-scene[data-stage="5"] .cw-i-arm-amb {
+  --wig: 4deg;
+  animation: cw-wiggle 0.8s ease-in-out infinite;
+}
+.insight-scene[data-stage="6"] .cw-f-armR-amb,
+.insight-scene[data-stage="6"] .cw-f-armL-amb,
+.insight-scene[data-stage="6"] .cw-i-arm-amb {
+  --wig: 8deg;
+  animation: cw-wiggle 0.9s ease-in-out infinite;
+}
+.cw-f-eyes {
+  transform: translate(var(--f-ex), var(--f-ey));
+  transition: transform 0.5s ease;
+}
+.cw-i-eyes {
+  transform: translate(var(--i-ex), var(--i-ey));
+  transition: transform 0.5s ease;
+}
+.cw-blink {
+  transform-box: fill-box;
+  transform-origin: 50% 55%;
+  animation: cw-blink 4.4s ease-in-out infinite;
+}
+.cw-eyes-happy,
+.cw-eyes-sleep,
+.cw-mouth {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.cw-eyes-open {
+  transition: opacity 0.25s ease;
+}
+.insight-scene[data-stage="6"] .cw-eyes-open,
+.insight-scene[data-stage="4"] .cw-finder .cw-eyes-open,
+.insight-scene[data-stage="5"] .cw-finder .cw-eyes-open {
+  opacity: 0;
+}
+.insight-scene[data-stage="6"] .cw-eyes-happy,
+.insight-scene[data-stage="4"] .cw-finder .cw-eyes-sleep,
+.insight-scene[data-stage="5"] .cw-finder .cw-eyes-sleep {
+  opacity: 1;
+}
+.insight-scene[data-stage="4"] .cw-finder .cw-eyes-sleep,
+.insight-scene[data-stage="4"] .cw-finder .cw-eyes-open,
+.insight-scene[data-stage="4"] .cw-finder .cw-zz {
+  transition-delay: 0.9s;
+}
+.insight-scene[data-stage="0"] .cw-finder .cw-m-o,
+.insight-scene[data-stage="1"] .cw-finder .cw-m-smile,
+.insight-scene[data-stage="2"] .cw-finder .cw-m-grin,
+.insight-scene[data-stage="3"] .cw-finder .cw-m-smile,
+.insight-scene[data-stage="4"] .cw-finder .cw-m-zz,
+.insight-scene[data-stage="5"] .cw-finder .cw-m-zz,
+.insight-scene[data-stage="6"] .cw-finder .cw-m-grin,
+.insight-scene[data-stage="0"] .cw-interp .cw-m-smile,
+.insight-scene[data-stage="1"] .cw-interp .cw-m-smile,
+.insight-scene[data-stage="2"] .cw-interp .cw-m-o,
+.insight-scene[data-stage="3"] .cw-interp .cw-m-o,
+.insight-scene[data-stage="4"] .cw-interp .cw-m-smile,
+.insight-scene[data-stage="5"] .cw-interp .cw-m-hm,
+.insight-scene[data-stage="6"] .cw-interp .cw-m-grin {
+  opacity: 1;
+}
+.cw-antenna {
+  transform-origin: 0 -238px;
+  animation: cw-wobble 2.8s ease-in-out infinite;
+}
+.cw-glint {
+  opacity: 0;
+}
+.insight-scene[data-stage="5"] .cw-glint {
+  opacity: 0.95;
+  animation: cw-twinkle 1.6s ease-in-out infinite;
+}
+/* a little hop for the working agent; one keyframe name per stage so any stage jump restarts it */
+.insight-scene[data-stage="1"] .cw-finder .cw-hop {
+  animation: cw-hop-1 0.7s ease-out;
+}
+.insight-scene[data-stage="2"] .cw-finder .cw-hop {
+  animation: cw-hop-2 0.7s ease-out;
+}
+.insight-scene[data-stage="3"] .cw-finder .cw-hop {
+  animation: cw-hop-3 0.7s ease-out;
+}
+.insight-scene[data-stage="4"] .cw-interp .cw-hop {
+  animation: cw-hop-4 0.7s ease-out;
+}
+.insight-scene[data-stage="5"] .cw-interp .cw-hop {
+  animation: cw-hop-5 0.7s ease-out;
+}
+.insight-scene[data-stage="6"] .cw-bob {
+  animation: cw-cheer 0.9s ease-in-out infinite;
+}
+/* clipboard rows */
+.cw-row-dot {
+  fill: #e2d8bd;
+  transition: fill 0.4s ease var(--rd, 0s);
+}
+.cw-row-line {
+  fill: none;
+  stroke: #e2d8bd;
+  stroke-width: 4;
+  stroke-linecap: round;
+  transition: stroke 0.4s ease var(--rd, 0s);
+}
+.cw-row-tick {
+  fill: none;
+  stroke: #17756a;
+  stroke-width: 3.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.insight-scene[data-stage="4"] .cw-row-dot {
+  fill: #c0634d;
+}
+.insight-scene[data-stage="4"] .cw-row-line {
+  stroke: #e8b3a4;
+}
+.insight-scene[data-stage="5"] .cw-row-dot,
+.insight-scene[data-stage="6"] .cw-row-dot {
+  fill: transparent;
+}
+.insight-scene[data-stage="5"] .cw-row-line,
+.insight-scene[data-stage="6"] .cw-row-line {
+  stroke: #a9c9bf;
+}
+
+/* ---- claim slip -------------------------------------------------------- */
+.cw-claim {
+  transform: translate(var(--claim-x), var(--claim-y)) scale(var(--claim-s));
+  transition: transform 0.9s var(--cw-ease);
+}
+.cw-claim-sway {
+  transform-origin: 85px -40px;
+  animation: cw-sway 4s ease-in-out infinite;
+}
+.insight-scene[data-stage="0"] .cw-claim-drop {
+  animation: cw-drop 1.1s cubic-bezier(0.3, 1.4, 0.5, 1) 0.9s backwards;
+}
+
+/* ---- speech bubble (text is written by insight.js) --------------------- */
+.cast-stamp {
+  position: absolute;
+  z-index: 3;
+  left: 19.2%;
+  right: auto;
+  top: auto;
+  bottom: 70.8%;
+  max-width: 19.5%;
+  padding: 6px 12px 7px;
+  border: 1.5px solid #e6d29a;
+  border-radius: 14px;
+  background: #fff9e9;
+  color: #6c5315;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.25;
+  text-align: center;
+  text-wrap: balance;
+  box-shadow: 0 2px 0 rgba(36, 43, 43, 0.06);
+}
+.cast-stamp::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6.5px;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  background: inherit;
+  border: inherit;
+  border-width: 0 1.5px 1.5px 0;
+  border-radius: 0 0 3px 0;
+  transform: rotate(45deg);
+}
+.insight-scene[data-stage="1"] .cast-stamp,
+.insight-scene[data-stage="2"] .cast-stamp,
+.insight-scene[data-stage="3"] .cast-stamp {
+  left: 0.8%;
+  bottom: 56.4%;
+  border-color: #b9d7cc;
+  background: #eef7f3;
+  color: #17655b;
+}
+.insight-scene[data-stage="4"] .cast-stamp,
+.insight-scene[data-stage="5"] .cast-stamp,
+.insight-scene[data-stage="6"] .cast-stamp {
+  left: auto;
+  right: 0.8%;
+  bottom: 57.4%;
+  border-color: #e8b3a4;
+  background: #fcf0ec;
+  color: #934b3d;
+}
+.insight-scene[data-stage="0"] .cast-stamp {
+  animation: cw-bubble-0 0.45s cubic-bezier(0.3, 1.5, 0.5, 1);
+}
+.insight-scene[data-stage="1"] .cast-stamp {
+  animation: cw-bubble-1 0.45s cubic-bezier(0.3, 1.5, 0.5, 1);
+}
+.insight-scene[data-stage="2"] .cast-stamp {
+  animation: cw-bubble-2 0.45s cubic-bezier(0.3, 1.5, 0.5, 1);
+}
+.insight-scene[data-stage="3"] .cast-stamp {
+  animation: cw-bubble-3 0.45s cubic-bezier(0.3, 1.5, 0.5, 1);
+}
+.insight-scene[data-stage="4"] .cast-stamp {
+  animation: cw-bubble-4 0.45s cubic-bezier(0.3, 1.5, 0.5, 1);
+}
+.insight-scene[data-stage="5"] .cast-stamp {
+  animation: cw-bubble-5 0.45s cubic-bezier(0.3, 1.5, 0.5, 1);
+}
+.insight-scene[data-stage="6"] .cast-stamp {
+  animation: cw-bubble-6 0.45s cubic-bezier(0.3, 1.5, 0.5, 1);
+}
+
+/* ---- cast legend -------------------------------------------------------- */
+.cast-labels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 14px;
+  margin: 10px auto 22px;
+  line-height: 1.3;
+}
+.cast-labels > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-align: left;
+  padding: 4px 14px 4px 8px;
+  border: 1.5px solid transparent;
+  border-radius: 999px;
+  transition:
+    background-color 0.4s ease,
+    border-color 0.4s ease;
+}
+/* the legend doubles as the "who is acting now" indicator */
+.insight-scene[data-stage="0"] .cast-labels > div:nth-child(1) {
+  background: #fbf6e6;
+  border-color: #e6d29a;
+}
+.insight-scene[data-stage="1"] .cast-labels > div:nth-child(2),
+.insight-scene[data-stage="2"] .cast-labels > div:nth-child(2),
+.insight-scene[data-stage="3"] .cast-labels > div:nth-child(2) {
+  background: #eef7f3;
+  border-color: #9fcdbf;
+}
+.insight-scene[data-stage="4"] .cast-labels > div:nth-child(3),
+.insight-scene[data-stage="5"] .cast-labels > div:nth-child(3),
+.insight-scene[data-stage="6"] .cast-labels > div:nth-child(3) {
+  background: #fcf0ec;
+  border-color: #e8b3a4;
+}
+.cast-labels p {
+  margin: 0;
+}
+.cast-icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+.cast-labels strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 750;
+}
+.cast-labels span {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 1px;
+}
+.cast-labels > div:nth-child(2) strong {
+  color: var(--accent);
+}
+.cast-labels > div:nth-child(3) strong {
+  color: var(--coral);
+}
+
+/* ---- ambient loops pause; blinking simply stops with eyes open ---------- */
+.insight-scene[data-playing="false"] .amb {
+  animation-play-state: paused;
+}
+.insight-scene[data-playing="false"] .cw-blink {
+  animation: none;
+}
+
+@keyframes cw-rise {
+  from {
+    transform: scaleY(0.02) skewX(-4deg);
+    opacity: 0;
+  }
+}
+@keyframes cw-drop {
+  from {
+    transform: translateY(-130px) rotate(-7deg);
+  }
+}
+@keyframes cw-sway {
+  0%,
+  100% {
+    transform: rotate(-1.6deg);
+  }
+  50% {
+    transform: rotate(1.6deg);
+  }
+}
+@keyframes cw-rain {
+  to {
+    stroke-dashoffset: -22;
+  }
+}
+@keyframes cw-ship {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1.4deg);
+  }
+  50% {
+    transform: translateY(-2.5px) rotate(1.4deg);
+  }
+}
+@keyframes cw-smoke {
+  0%,
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-3px, -5px);
+    opacity: 0.7;
+  }
+}
+@keyframes cw-twinkle {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(0.7);
+  }
+}
+@keyframes cw-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes cw-ants {
+  to {
+    stroke-dashoffset: -19;
+  }
+}
+@keyframes cw-ping {
+  0% {
+    transform: scale(0.45);
+    opacity: 1;
+  }
+  80%,
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+@keyframes cw-thread {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+@keyframes cw-loop {
+  to {
+    stroke-dashoffset: -12;
+  }
+}
+@keyframes cw-dots {
+  to {
+    stroke-dashoffset: -12.1;
+  }
+}
+@keyframes cw-fill {
+  from {
+    transform: scaleX(0);
+  }
+}
+@keyframes cw-reveal {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  12% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes cw-journey {
+  0% {
+    transform: translate(243px, 320px) rotate(0deg);
+    opacity: 0;
+  }
+  12% {
+    transform: translate(243px, 320px) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(563px, 262px) rotate(0deg);
+  }
+  60% {
+    transform: translate(563px, 262px) rotate(0deg);
+  }
+  74% {
+    transform: translate(640px, 292px) rotate(90deg);
+  }
+  80% {
+    transform: translate(640px, 292px) rotate(90deg);
+  }
+}
+@keyframes cw-scan {
+  0% {
+    transform: translate(257px, 318px);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.9;
+  }
+  45% {
+    transform: translate(551px, 262px);
+    opacity: 0.9;
+  }
+  55% {
+    transform: translate(551px, 262px);
+  }
+  92% {
+    transform: translate(725px, 262px);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(725px, 262px);
+    opacity: 0;
+  }
+}
+@keyframes cw-glow {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.09);
+  }
+}
+@keyframes cw-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+@keyframes cw-cheer {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  45% {
+    transform: translateY(-13px);
+  }
+}
+@keyframes cw-blink {
+  0%,
+  92%,
+  100% {
+    transform: scaleY(1);
+  }
+  95.5% {
+    transform: scaleY(0.08);
+  }
+}
+@keyframes cw-wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(calc(var(--wig, 4deg) * -1));
+  }
+  75% {
+    transform: rotate(var(--wig, 4deg));
+  }
+}
+@keyframes cw-wobble {
+  0%,
+  100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+@keyframes cw-hop-1 {
+  0%,
+  62%,
+  100% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(-30px);
+  }
+  80% {
+    transform: translateY(-8px);
+  }
+}
+@keyframes cw-hop-2 {
+  0%,
+  62%,
+  100% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(-30px);
+  }
+  80% {
+    transform: translateY(-8px);
+  }
+}
+@keyframes cw-hop-3 {
+  0%,
+  62%,
+  100% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(-30px);
+  }
+  80% {
+    transform: translateY(-8px);
+  }
+}
+@keyframes cw-hop-4 {
+  0%,
+  62%,
+  100% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(-30px);
+  }
+  80% {
+    transform: translateY(-8px);
+  }
+}
+@keyframes cw-hop-5 {
+  0%,
+  62%,
+  100% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(-30px);
+  }
+  80% {
+    transform: translateY(-8px);
+  }
+}
+@keyframes cw-bubble-0 {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+}
+@keyframes cw-bubble-1 {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+}
+@keyframes cw-bubble-2 {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+}
+@keyframes cw-bubble-3 {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+}
+@keyframes cw-bubble-4 {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+}
+@keyframes cw-bubble-5 {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+}
+@keyframes cw-bubble-6 {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+}
+@keyframes cw-zz {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(3px, -7px) scale(0.82);
+    opacity: 0.4;
+  }
+}
+
+/* ---- responsive --------------------------------------------------------- */
+@media (max-width: 900px) {
+  .cast-stamp {
+    font-size: 11.5px;
+    padding: 4px 9px 5px;
+    max-width: 19%;
+  }
+  .insight-scene[data-stage="1"] .cast-stamp,
+  .insight-scene[data-stage="2"] .cast-stamp,
+  .insight-scene[data-stage="3"] .cast-stamp {
+    bottom: 58%;
+  }
+}
+@media (max-width: 560px) {
+  /* Small screens: the book fills the width; the two agents step down in
+     front of the stage and the speech bubble sits between them. */
+  .cast-art {
+    width: auto;
+    margin: 14px -22px 0;
+    aspect-ratio: 728 / 760;
+  }
+  .pop-stage {
+    inset: auto;
+    top: 0;
+    left: calc(-166 / 728 * 100%);
+    width: calc(1060 / 728 * 100%);
+    height: auto;
+    aspect-ratio: 2 / 1;
+    overflow: visible;
+  }
+  .cw-only-m {
+    display: inline;
+  }
+  .cw-only-d {
     display: none;
+  }
+  .insight-scene {
+    --bot-y: 744px;
+    --bot-s: 0.74;
+    --f-x: 262px;
+    --i-x: 742px;
+    --f-ey: -7px;
+    --i-ey: -7px;
+    --strip-x: 170px;
+    --claim-x: 390px;
+    --claim-y: 8px;
+    --claim-s: 1.3;
+  }
+  .insight-scene[data-stage="1"],
+  .insight-scene[data-stage="2"],
+  .insight-scene[data-stage="3"],
+  .insight-scene[data-stage="4"],
+  .insight-scene[data-stage="5"],
+  .insight-scene[data-stage="6"] {
+    --f-x: 262px;
+    --i-x: 742px;
+    --claim-x: 652px;
+    --claim-y: 8px;
+    --claim-s: 1.2;
+    --strip-x: 170px;
+  }
+  .insight-scene[data-stage="1"] {
+    --f-armR: -150deg;
+    --f-ey: -3px;
+    --i-ey: -5px;
+  }
+  .insight-scene[data-stage="2"] {
+    --f-ey: -5px;
+    --i-ey: -5px;
+    --i-x: 738px;
+  }
+  .insight-scene[data-stage="3"] {
+    --f-ey: -7px;
+    --i-ey: -8px;
+  }
+  .insight-scene[data-stage="4"] {
+    --i-arm: 152deg;
+    --i-wrist: 8deg;
+    --i-ey: -7px;
+    --f-x: 256px;
+  }
+  .insight-scene[data-stage="5"] {
+    --f-x: 256px;
+    --i-x: 748px;
+    --clip-s: 2;
+    --clip-ty: 30px;
+  }
+  /* bigger lettering for small screens */
+  .cw-card-id {
+    font-size: 24px;
+  }
+  .cw-tag-text {
+    font-size: 24px;
+  }
+  .cw-tag-verdict {
+    font-size: 21px;
+  }
+  .cw-meter-text {
+    font-size: 25px;
+  }
+  .cw-dist-text {
+    font-size: 17px;
+  }
+  .cw-cap-text {
+    font-size: 16px;
+  }
+  .cw-same-text {
+    font-size: 17px;
+  }
+  .cw-bin-text {
+    font-size: 16px;
+  }
+  .cw-x2-text,
+  .cw-merge-text {
+    font-size: 16px;
+  }
+  .cast-stamp,
+  .insight-scene[data-stage] .cast-stamp {
+    left: 50%;
+    right: auto;
+    top: 78%;
+    bottom: auto;
+    translate: -50% 0;
+    max-width: 34%;
+    font-size: 11px;
+    line-height: 1.25;
+    padding: 5px 9px 6px;
+    border-radius: 11px;
+  }
+  .cast-stamp::after {
+    width: 8px;
+    height: 8px;
+    left: 50%;
+    top: -5px;
+    bottom: auto;
+    margin: 0 0 0 -4px;
+    transform: rotate(-135deg);
+  }
+  .insight-scene[data-stage="1"] .cast-stamp::after,
+  .insight-scene[data-stage="2"] .cast-stamp::after,
+  .insight-scene[data-stage="3"] .cast-stamp::after {
+    left: -5px;
+    top: 50%;
+    margin: -4px 0 0;
+    transform: rotate(135deg);
+  }
+  .insight-scene[data-stage="4"] .cast-stamp::after,
+  .insight-scene[data-stage="5"] .cast-stamp::after,
+  .insight-scene[data-stage="6"] .cast-stamp::after {
+    left: auto;
+    right: -5px;
+    top: 50%;
+    margin: -4px 0 0;
+    transform: rotate(-45deg);
+  }
+  .cast-labels {
+    gap: 4px 4px;
+    margin: 8px auto 18px;
+  }
+  .cast-labels > div {
+    gap: 6px;
+    padding: 3px 9px 3px 5px;
+  }
+  .cast-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .cast-labels strong {
+    font-size: 12.5px;
+  }
+  .cast-labels span {
+    font-size: 9.5px;
+  }
+}
+@media (min-width: 561px) and (max-width: 650px) {
+  .cast-stamp {
+    font-size: 10px;
+    padding: 3px 7px 4px;
+    max-width: 18.5%;
+  }
+}
+@media (max-width: 359px) {
+  .cast-stamp,
+  .insight-scene[data-stage] .cast-stamp {
+    font-size: 10px;
+    max-width: 30%;
+    padding: 4px 6px 5px;
+  }
+  .cast-labels {
+    gap: 4px 2px;
+  }
+  .cast-labels > div {
+    gap: 4px;
+    padding: 3px 6px 3px 4px;
+  }
+  .cast-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .cast-labels strong {
+    font-size: 11.5px;
+  }
+  .cast-labels span {
+    font-size: 8.5px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .insight-scene *,
+  .insight-scene *::before,
+  .insight-scene *::after {
+    animation: none !important;
+    transition: none !important;
   }
 }
