@@ -74,7 +74,9 @@ class LLMClient:
                 try:
                     extra_body = {}
                     if self.spec.enable_thinking is not None:
-                        extra_body["enable_thinking"] = self.spec.enable_thinking
+                        extra_body["chat_template_kwargs"] = {
+                            "enable_thinking": self.spec.enable_thinking
+                        }
                     kwargs = {}
                     if extra_body:
                         kwargs["extra_body"] = extra_body
@@ -98,6 +100,9 @@ class LLMClient:
             msgs.append({"role": "system", "content": system})
         msgs.append({"role": "user", "content": prompt})
         return await self.chat(msgs, **kw)
+
+    async def aclose(self) -> None:
+        await self._client.close()
 
 
 def get_client(model_name: str = "qwen3-4b", max_concurrency: int = 8) -> LLMClient:

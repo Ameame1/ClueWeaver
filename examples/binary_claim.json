@@ -1,0 +1,10 @@
+{
+  "paragraphs": [
+    "Mara left the brass key inside the desk drawer before dinner.",
+    "After dinner, Leon opened the drawer and took the key to the attic."
+  ],
+  "question": "Leon moved the brass key from the drawer to the attic.",
+  "options": {},
+  "binary_mode": true,
+  "gold": "TRUE"
+}

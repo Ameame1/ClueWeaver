@@ -7,3 +7,9 @@ data/
 models/
 
 *.jsonl.tmp
+.env
+.env.*
+!.env.example
+results/
+logs/
+.pytest_cache/

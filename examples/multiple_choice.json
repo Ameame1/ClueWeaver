@@ -1,0 +1,10 @@
+{
+  "paragraphs": [
+    "Mara left the brass key inside the desk drawer before dinner.",
+    "After dinner, Leon opened the drawer and took the key to the attic.",
+    "Iris and Tomas stayed in the garden until midnight."
+  ],
+  "question": "Who moved the key to the attic?",
+  "options": {"A": "Mara", "B": "Leon", "C": "Iris", "D": "Tomas"},
+  "gold": "B"
+}

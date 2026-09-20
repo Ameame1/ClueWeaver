@@ -63,6 +63,8 @@ async def run_question(
     binary_finder_client: LLMClient | None = None,
     self_calibration: bool = True,
 ) -> PipelineResult:
+    if binary_mode:
+        options = {}
     t0 = time.time()
     _t_seg = time.time()
     if retrieval_enabled:

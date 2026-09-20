@@ -93,10 +93,13 @@ ClueWeaver improves overall accuracy by **14.5 percentage points** over the Qwen
 | Interpreter and self-calibration | [src/agent/interpreter.py](src/agent/interpreter.py) |
 | GRPO reward functions | [src/training/rewards/plugin.py](src/training/rewards/plugin.py) |
 | OpenAI-compatible local client | [src/llm_client.py](src/llm_client.py) |
+| Single-question command | [scripts/run_question.py](scripts/run_question.py) |
+| Input examples | [examples/](examples/) |
+| Reproduction and verification | [docs/reproducibility.md](docs/reproducibility.md) |
 | Finder weights | [Hugging Face / Finder](https://huggingface.co/Ameame1002/ClueWeaver/tree/main/Finder) |
 | Interpreter weights | [Hugging Face / Interpreter](https://huggingface.co/Ameame1002/ClueWeaver/tree/main/Interpreter) |
 
-Each model directory contains full weights, configuration, and tokenizer files. This repository provides the core inference implementation and reward plugins; dataset files, training launchers, and a complete benchmark evaluation harness are not included.
+Each model directory contains full weights, configuration, and tokenizer files. The [reproduction guide](docs/reproducibility.md) describes the release scope, checked behavior, and requirements for reproducing the paper's results.
 
 ## Quick Start
 
@@ -108,7 +111,6 @@ Use Python 3.10 or newer and a PyTorch installation compatible with your CUDA en
 git clone https://github.com/Ameame1/ClueWeaver.git
 cd ClueWeaver
 pip install -r requirements.txt
-pip install huggingface_hub
 hf download Ameame1002/ClueWeaver --local-dir models/ClueWeaver
 hf download BAAI/bge-m3 --local-dir models/bge-m3
 ```
@@ -142,6 +144,8 @@ export QWEN_KEY=EMPTY
 export QWEN_FINDER_BASE=http://127.0.0.1:8001/v1
 export QWEN_FINDER_MODEL_NAME=clueweaver-finder
 export QWEN_FINDER_KEY=EMPTY
+export QWEN_ENABLE_THINKING=false
+export QWEN_FINDER_ENABLE_THINKING=false
 export BGE_M3_PATH=models/bge-m3
 export RETRIEVER_DEVICE=cpu
 ```
@@ -150,34 +154,28 @@ The example keeps retrieval on CPU to avoid competing with the two model servers
 
 ### Run a Question
 
-```python
-import asyncio
+```bash
+python -m scripts.run_question \
+  --input examples/multiple_choice.json --output results/multiple_choice.json
 
-from src.agent.pipeline import run_question
-from src.llm_client import get_client
-
-
-async def main():
-    result = await run_question(
-        client=get_client("qwen3-4b", max_concurrency=1),
-        finder_client=get_client("qwen3-4b-finder", max_concurrency=1),
-        paragraphs=[
-            "Mara left the brass key inside the desk drawer before dinner.",
-            "After dinner, Leon opened the drawer and took the key to the attic.",
-        ],
-        question="Who moved the key to the attic?",
-        options={"A": "Mara", "B": "Leon"},
-        gold="",  # Optional evaluation label; not used in model prompts.
-    )
-    print(result.predicted)
-    print(result.rationale)
-    print(result.evidence)
-
-
-asyncio.run(main())
+python -m scripts.run_question \
+  --input examples/binary_claim.json --output results/binary_claim.json
 ```
 
-For binary claim verification, pass `binary_mode=True` and the appropriate label options. Prompt formats and self-calibration rules are documented in Appendix E.
+Replace the paragraphs and question in either example with your own input. The command returns the answer, rationale, selected evidence, and timing information. The optional `gold` field is used only for scoring, never in model prompts; unlabeled inputs return `correct: null`.
+
+Binary claim verification requires `binary_mode=true` and **`options={}`**, with answers normalized to `TRUE` or `FALSE`. Multiple-choice inputs use the four labels `A`, `B`, `C`, and `D`. For direct Python integration, use `src.agent.pipeline.run_question`. Prompt formats and self-calibration rules are documented in Appendix E.
+
+### Offline Checks
+
+These checks require no GPU, model downloads, or API credentials:
+
+```bash
+python -m unittest discover -s tests -v
+python -m scripts.run_question --input examples/binary_claim.json --validate-only
+```
+
+They validate input and interface behavior with mocked responses, not benchmark accuracy. See the [verification record](docs/reproducibility.md) for the tested environment and remaining reproduction requirements.
 
 ### Paper Configuration
 

@@ -5,3 +5,4 @@ transformers
 fastapi
 uvicorn
 pydantic
+huggingface_hub
