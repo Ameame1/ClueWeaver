@@ -1,0 +1,279 @@
+.insight-section {
+  padding-top: 48px;
+  padding-bottom: 58px;
+  border-top: 1px solid var(--line);
+}
+.insight-section .section-heading {
+  margin-bottom: 16px;
+}
+.insight-controls {
+  display: flex;
+  gap: 8px;
+}
+.insight-controls button {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 6px;
+  color: var(--accent);
+}
+.insight-controls button:hover {
+  background: var(--accent-light);
+}
+.insight-controls svg {
+  width: 19px;
+  height: 19px;
+}
+.insight-question {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 12px 0 0;
+}
+.insight-scene {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  isolation: isolate;
+}
+.insight-scene > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.8s ease;
+}
+.insight-scene text {
+  font-family: inherit;
+  font-size: 13px;
+  fill: #38564f;
+}
+.insight-scene .scene-label {
+  font-size: 16px;
+  font-weight: 650;
+}
+.insight-scene .answer-name {
+  font-size: 23px;
+  font-weight: 750;
+}
+.insight-scene .clue {
+  transition:
+    opacity 0.7s,
+    filter 0.7s;
+}
+.insight-scene .evidence-flow,
+.insight-scene .finder-bubble,
+.insight-scene .evidence-packet,
+.insight-scene .answer-bubble {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.insight-scene .interpreter-character {
+  opacity: 0.4;
+  transition: opacity 0.6s;
+}
+.insight-scene[data-stage="1"] .flow-one,
+.insight-scene[data-stage="1"] .finder-bubble {
+  opacity: 1;
+}
+.insight-scene[data-stage="2"] .flow-one,
+.insight-scene[data-stage="2"] .flow-two,
+.insight-scene[data-stage="2"] .evidence-packet,
+.insight-scene[data-stage="2"] .interpreter-character {
+  opacity: 1;
+}
+.insight-scene[data-stage="3"] .evidence-flow,
+.insight-scene[data-stage="3"] .evidence-packet,
+.insight-scene[data-stage="3"] .answer-bubble,
+.insight-scene[data-stage="3"] .interpreter-character {
+  opacity: 1;
+}
+.insight-scene[data-stage="2"] .clue,
+.insight-scene[data-stage="3"] .clue {
+  opacity: 0.5;
+}
+.insight-scene[data-playing="true"] .evidence-flow {
+  animation: clue-flow 1s linear infinite;
+}
+.insight-scene[data-playing="true"][data-stage="1"] .magnifier {
+  animation: clue-scan 1.6s ease-in-out infinite;
+  transform-origin: 480px 208px;
+}
+.insight-scene[data-playing="true"][data-stage="0"] .clue {
+  animation: clue-highlight 2.4s ease-in-out infinite;
+}
+.insight-scene[data-playing="true"][data-stage="0"] .clue-b {
+  animation-delay: 0.8s;
+}
+.insight-scene[data-playing="true"][data-stage="0"] .clue-c {
+  animation-delay: 1.6s;
+}
+.insight-scene[data-playing="true"] .robot-eyes {
+  animation: clue-blink 4s infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.insight-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+.insight-timeline button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: none;
+  border: 0;
+  border-top: 3px solid var(--line);
+  padding: 12px 0;
+  text-align: left;
+  font-size: 12px;
+  color: var(--muted);
+}
+.insight-timeline button span {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 3px;
+}
+.insight-timeline button[aria-pressed="true"] {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.insight-explanation {
+  min-height: 120px;
+  padding: 8px 0 12px;
+  max-width: 850px;
+}
+.insight-explanation h3 {
+  font-size: 21px;
+  margin: 8px 0;
+}
+.insight-explanation p {
+  color: var(--muted);
+  font-size: 15px;
+  margin: 0;
+}
+.insight-evidence {
+  font-size: 13px;
+  border-top: 1px solid var(--line);
+  padding: 13px 0;
+}
+.insight-evidence summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 600;
+}
+.insight-evidence ol {
+  padding-left: 22px;
+  color: var(--muted);
+}
+.insight-evidence li {
+  margin: 7px 0;
+}
+.insight-disclaimer {
+  font-size: 11px;
+  color: var(--muted);
+  margin: 0;
+  max-width: 850px;
+}
+@keyframes clue-flow {
+  to {
+    stroke-dashoffset: -30;
+  }
+}
+@keyframes clue-scan {
+  0%,
+  100% {
+    transform: translate(-7px, -5px) rotate(-9deg);
+  }
+  50% {
+    transform: translate(3px, 5px) rotate(8deg);
+  }
+}
+@keyframes clue-highlight {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes clue-blink {
+  0%,
+  43%,
+  47%,
+  100% {
+    transform: scaleY(1);
+  }
+  45% {
+    transform: scaleY(0.1);
+  }
+}
+@media (max-width: 760px) {
+  .insight-section {
+    padding-top: 32px;
+    padding-bottom: 38px;
+  }
+  .insight-section .section-heading {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+  .insight-section h2 {
+    font-size: 24px;
+  }
+  .insight-controls {
+    flex-shrink: 0;
+  }
+  .insight-question {
+    font-size: 17px;
+    text-align: left;
+  }
+  .insight-scene {
+    height: 306px;
+  }
+  .insight-scene > svg {
+    width: 900px;
+    max-width: none;
+    height: 306px;
+  }
+  .insight-scene[data-stage="1"] > svg {
+    transform: translateX(-225px);
+  }
+  .insight-scene[data-stage="2"] > svg {
+    transform: translateX(-410px);
+  }
+  .insight-scene[data-stage="3"] > svg {
+    transform: translateX(-590px);
+  }
+  .insight-timeline {
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .insight-timeline button {
+    font-size: 11px;
+  }
+  .insight-timeline button span {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+  .insight-explanation {
+    min-height: 155px;
+  }
+  .insight-explanation h3 {
+    font-size: 19px;
+  }
+  .insight-explanation p {
+    font-size: 14px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .insight-scene * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

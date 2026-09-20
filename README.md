@@ -10,18 +10,9 @@
 
 [![Paper](https://img.shields.io/badge/arXiv-2608.25531-b31b1b.svg)](https://arxiv.org/abs/2608.25531)
 [![Models](https://img.shields.io/badge/Hugging%20Face-Models-yellow.svg)](https://huggingface.co/Ameame1002/ClueWeaver)
-[![Conference](https://img.shields.io/badge/ICONIP-2026-3679a8.svg)](https://arxiv.org/abs/2608.25531)
 [![Project Page](https://img.shields.io/badge/Project-Page-17756a.svg)](https://ameame1.github.io/ClueWeaver/)
 
-[Quick Start](#quick-start) · [Results](#results) · [Citation](#citation)
-
 </div>
-
-## News
-
-- ClueWeaver has been accepted at **ICONIP 2026**.
-- The **Finder** and **Interpreter** weights are publicly available in a [single Hugging Face repository](https://huggingface.co/Ameame1002/ClueWeaver).
-- This release includes the core inference pipeline and agent-specific reward functions.
 
 ## Overview
 
