@@ -13,7 +13,7 @@
 [![Conference](https://img.shields.io/badge/ICONIP-2026-3679a8.svg)](https://arxiv.org/abs/2608.25531)
 [![Project Page](https://img.shields.io/badge/Project-Page-17756a.svg)](https://ameame1.github.io/ClueWeaver/)
 
-[Project Page](https://ameame1.github.io/ClueWeaver/) · [Paper](https://arxiv.org/abs/2608.25531) · [Models](https://huggingface.co/Ameame1002/ClueWeaver) · [Quick Start](#quick-start) · [Results](#results) · [Citation](#citation)
+[Quick Start](#quick-start) · [Results](#results) · [Citation](#citation)
 
 </div>
 
