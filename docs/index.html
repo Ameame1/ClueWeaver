@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="ClueWeaver: reward-guided dual-agent evidence reasoning for compact LLMs on literary long narratives. Accepted at ICONIP 2026."
+    />
+    <meta property="og:title" content="ClueWeaver | ICONIP 2026" />
+    <meta
+      property="og:description"
+      content="Finding the clues. Connecting the evidence. A dual-agent framework for long-narrative question answering."
+    />
+    <meta
+      property="og:image"
+      content="https://ameame1.github.io/ClueWeaver/images/framework.png"
+    />
+    <meta property="og:url" content="https://ameame1.github.io/ClueWeaver/" />
+    <meta name="theme-color" content="#17756a" />
+    <title>ClueWeaver | ICONIP 2026</title>
+    <link rel="stylesheet" href="site.css" />
+    <script src="site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav class="navigation" aria-label="Main navigation">
+      <a class="wordmark" href="#"
+        >Clue<span>Weaver</span
+        ><span class="wordmark-dot" aria-hidden="true">.</span></a
+      >
+      <div>
+        <a href="#method">Method</a><a href="#results">Results</a
+        ><a href="#citation">Citation</a
+        ><a href="https://github.com/Ameame1/ClueWeaver"
+          >GitHub <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </nav>
+    <main id="main">
+      <header class="hero">
+        <p class="venue">ICONIP 2026 <span>Accepted paper</span></p>
+        <h1 class="logo-heading">
+          <img
+            src="images/clueweaver-logo-horizontal.png"
+            width="2048"
+            height="683"
+            alt="ClueWeaver"
+          />
+        </h1>
+        <p class="paper-title">
+          Reward-Guided Dual-Agent Evidence Reasoning<br
+            class="desktop-break"
+          />
+          for Compact LLMs on Literary Long Narratives
+        </p>
+        <div class="authors">
+          <span>Jihao Zhu<sup>2,*</sup></span
+          ><span>Zhiwei Yang<sup>1,*</sup></span
+          ><span>Wenxiao Zhang<sup>3,*</sup></span
+          ><span>Junqian Zhao<sup>1</sup></span
+          ><span>Qi You<sup>1</sup></span> <span>Fangqi Wang<sup>1</sup></span
+          ><span>Zheyuan Deng<sup>4</sup></span
+          ><span>Hanzhe Yang<sup>3</sup></span
+          ><span>Yu Liu<sup>1,†</sup></span
+          ><span>Jin B. Hong<sup>3,†</sup></span>
+        </div>
+        <div class="affiliations">
+          <span><sup>1</sup> Institute of Information Engineering, CAS</span
+          ><span><sup>2</sup> University of Aberdeen</span
+          ><span><sup>3</sup> The University of Western Australia</span
+          ><span><sup>4</sup> Brown University</span>
+        </div>
+        <p class="author-note">
+          * Equal contribution &nbsp; · &nbsp; † Corresponding authors
+        </p>
+        <div class="resource-links">
+          <a class="resource primary" href="https://arxiv.org/abs/2608.25531"
+            >Paper <span aria-hidden="true">↗</span></a
+          ><a class="resource" href="https://github.com/Ameame1/ClueWeaver"
+            >Code <span aria-hidden="true">↗</span></a
+          ><a
+            class="resource"
+            href="https://huggingface.co/Ameame1002/ClueWeaver"
+            >Model weights <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </header>
+
+      <section class="overview wrap" aria-labelledby="overview-heading">
+        <h2 id="overview-heading" class="overview-title">
+          Finding the clues. Connecting the evidence.
+        </h2>
+        <p class="section-lead">
+          A compact Finder selects the evidence.<br class="mobile-break" />
+          An Interpreter connects it into a grounded answer.
+        </p>
+        <figure>
+          <button
+            class="figure-button"
+            data-figure="images/framework.png"
+            data-caption="ClueWeaver framework"
+            aria-label="Enlarge the ClueWeaver framework"
+          >
+            <img
+              src="images/framework.png"
+              width="2274"
+              height="865"
+              alt="ClueWeaver: retrieval-guided segmentation, Finder evidence selection, Interpreter reasoning and internal self-calibration, with separate GRPO rewards."
+            />
+          </button>
+          <figcaption>
+            Retrieval-guided segmentation → evidence selection →
+            evidence-grounded interpretation.<br />Both agents use
+            Qwen3-4B-Instruct. Self-calibration is internal to the Interpreter.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="abstract-band" id="abstract">
+        <div class="reading-width">
+          <p class="eyebrow">THE IDEA</p>
+          <h2>Abstract</h2>
+          <p>
+            Humanities and social science research requires close reading of
+            long narrative materials such as novels, scripts, archives, and case
+            reports, yet many users have limited access to costly proprietary
+            long-context models. Compact, locally deployable language models are
+            a practical alternative, but directly feeding them an entire long
+            context remains costly, hard to inspect, and prone to missing sparse
+            evidence.
+          </p>
+          <p>
+            We present <strong>ClueWeaver</strong>, an evidence-aware dual-agent
+            framework for long-narrative question answering with compact local
+            models. A <strong>Finder</strong> identifies passages containing
+            answer-critical clues through retrieval-guided segmentation, while
+            an <strong>Interpreter</strong> derives the answer from the selected
+            evidence, produces rationales with paragraph-ID citations, and
+            applies an internal self-calibration pass for high-risk questions.
+          </p>
+          <p>
+            Both agents are optimized with reward-guided reinforcement learning:
+            Finder rewards emphasize evidence retention and faithful
+            paragraph-ID references, and Interpreter rewards emphasize
+            correctness, grounding, and concise explanations. This decomposition
+            makes evidence selection and reasoning more inspectable than
+            end-to-end prompting. Experiments across multiple long-context
+            narrative question answering and claim verification settings show
+            that ClueWeaver substantially improves local end-to-end language
+            models while providing evidence coverage and paragraph-referenced
+            reasoning traces.
+          </p>
+        </div>
+      </section>
+
+      <section class="wrap section" id="method">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">METHOD</p>
+            <h2>Two agents, complementary objectives.</h2>
+          </div>
+          <a class="text-link" href="https://arxiv.org/html/2608.25531v2#S3"
+            >Read the methodology ↗</a
+          >
+        </div>
+        <div class="method-grid">
+          <article>
+            <span class="step">01 / FINDER</span>
+            <h3>Retain answer-critical clues</h3>
+            <p>
+              Retrieval guides the construction of narrative segments. The
+              Finder makes a YES/NO evidence decision, with a short rationale
+              and supporting paragraph IDs.
+            </p>
+            <p class="reward">
+              <strong>Reward focus</strong>Evidence retention · citation
+              faithfulness
+            </p>
+          </article>
+          <article>
+            <span class="step interpreter">02 / INTERPRETER</span>
+            <h3>Reason from surviving evidence</h3>
+            <p>
+              Selected passages are packed in narrative order. The Interpreter
+              answers with paragraph-grounded reasoning and can re-check
+              high-risk answers against the same evidence.
+            </p>
+            <p class="reward">
+              <strong>Reward focus</strong>Answer correctness · grounding ·
+              concision
+            </p>
+          </article>
+        </div>
+        <p class="method-note">
+          Both agents are trained separately with GRPO. The source narrative is
+          given; retrieval operates within it.
+        </p>
+      </section>
+
+      <section class="results-band" id="results">
+        <div class="wrap section">
+          <p class="eyebrow">EXPERIMENTS</p>
+          <h2>Stronger compact-model reading.</h2>
+          <p class="section-lead left">
+            Four long-context narrative benchmarks. Final answer accuracy.
+          </p>
+          <div class="metrics">
+            <div>
+              <strong>59.0<span>%</span></strong>
+              <p>Overall accuracy</p>
+            </div>
+            <div>
+              <strong>+14.5<span>pp</span></strong>
+              <p>vs. Qwen3-4B direct reading</p>
+            </div>
+            <div>
+              <strong>+6.4<span>pp</span></strong>
+              <p>vs. strongest local baseline overall</p>
+            </div>
+          </div>
+          <div class="table-toolbar">
+            <h3>Table 1 · Main results</h3>
+            <div
+              class="filters"
+              role="group"
+              aria-label="Filter result methods"
+            >
+              <button type="button" data-filter="all" aria-pressed="true">
+                All methods</button
+              ><button type="button" data-filter="local" aria-pressed="false">
+                Local</button
+              ><button type="button" data-filter="api" aria-pressed="false">
+                API
+              </button>
+            </div>
+          </div>
+          <div
+            class="table-scroll"
+            tabindex="0"
+            role="region"
+            aria-label="Benchmark results table"
+          >
+            <table>
+              <caption class="sr-only">
+                Accuracy percentages from Table 1 of the paper. ClueWeaver is
+                highlighted as the proposed method, not as the best API result.
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Method</th>
+                  <th scope="col">DetectiveQA</th>
+                  <th scope="col">∞Bench</th>
+                  <th scope="col">LongBench v2</th>
+                  <th scope="col">NoCha</th>
+                  <th scope="col">Overall</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="group" data-kind="local">
+                  <th colspan="6" scope="rowgroup">
+                    End-to-end reader · Local
+                  </th>
+                </tr>
+                <tr data-kind="local">
+                  <th scope="row">Qwen3-4B-Instruct</th>
+                  <td>36.5</td>
+                  <td>50.7</td>
+                  <td>38.5</td>
+                  <td>49.5</td>
+                  <td>44.5</td>
+                </tr>
+                <tr data-kind="local">
+                  <th scope="row">Qwen3-8B</th>
+                  <td>45.2</td>
+                  <td>56.5</td>
+                  <td>26.9</td>
+                  <td>55.0</td>
+                  <td>49.7</td>
+                </tr>
+                <tr data-kind="local">
+                  <th scope="row">Ministral-3-14B</th>
+                  <td>45.2</td>
+                  <td>60.9</td>
+                  <td>26.9</td>
+                  <td>51.4</td>
+                  <td>49.4</td>
+                </tr>
+                <tr data-kind="local">
+                  <th scope="row">GPT-OSS-20B</th>
+                  <td>30.8</td>
+                  <td>33.3</td>
+                  <td>34.6</td>
+                  <td>50.5</td>
+                  <td>38.7</td>
+                </tr>
+                <tr data-kind="local">
+                  <th scope="row">Qwen3-30B-A3B</th>
+                  <td>44.2</td>
+                  <td>58.0</td>
+                  <td>38.5</td>
+                  <td>54.1</td>
+                  <td>50.3</td>
+                </tr>
+                <tr data-kind="local">
+                  <th scope="row">Gemma-4-31B-it</th>
+                  <td>35.6</td>
+                  <td>58.0</td>
+                  <td>46.2</td>
+                  <td>59.5</td>
+                  <td>50.0</td>
+                </tr>
+                <tr class="group" data-kind="api">
+                  <th colspan="6" scope="rowgroup">End-to-end reader · API</th>
+                </tr>
+                <tr data-kind="api">
+                  <th scope="row">Claude Haiku 4.5</th>
+                  <td>62.5</td>
+                  <td>73.9</td>
+                  <td>38.5</td>
+                  <td>64.9</td>
+                  <td>63.9</td>
+                </tr>
+                <tr data-kind="api">
+                  <th scope="row">GPT-5 nano</th>
+                  <td>62.5</td>
+                  <td>76.8</td>
+                  <td>26.9</td>
+                  <td>60.4</td>
+                  <td>61.9</td>
+                </tr>
+                <tr class="group" data-kind="local">
+                  <th colspan="6" scope="rowgroup">
+                    Agentic pipelines · Local
+                  </th>
+                </tr>
+                <tr data-kind="local">
+                  <th scope="row">ReAct</th>
+                  <td>50.0</td>
+                  <td>50.7</td>
+                  <td>38.5</td>
+                  <td>58.6</td>
+                  <td>52.3</td>
+                </tr>
+                <tr data-kind="local">
+                  <th scope="row">IRCoT</th>
+                  <td>53.8</td>
+                  <td>44.9</td>
+                  <td>34.6</td>
+                  <td>60.4</td>
+                  <td>52.6</td>
+                </tr>
+                <tr data-kind="local">
+                  <th scope="row">Self-Ask</th>
+                  <td>36.5</td>
+                  <td>49.3</td>
+                  <td>19.2</td>
+                  <td>59.5</td>
+                  <td>46.1</td>
+                </tr>
+                <tr data-kind="local">
+                  <th scope="row">Chain-of-Agents</th>
+                  <td>27.9</td>
+                  <td>46.4</td>
+                  <td>38.5</td>
+                  <td>55.9</td>
+                  <td>42.9</td>
+                </tr>
+                <tr data-kind="local">
+                  <th scope="row">RAG-DDR</th>
+                  <td>47.1</td>
+                  <td>53.6</td>
+                  <td>30.8</td>
+                  <td>59.5</td>
+                  <td>51.6</td>
+                </tr>
+                <tr class="ours">
+                  <th scope="row">ClueWeaver <span>Ours</span></th>
+                  <td>55.8</td>
+                  <td>63.8</td>
+                  <td>50.0</td>
+                  <td>61.3</td>
+                  <td>59.0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note">
+            310 questions: DetectiveQA (104), ∞Bench (69), LongBench v2 (26),
+            NoCha (111). Overall accuracy is weighted by question count. Local
+            end-to-end readers use 32K context; API readers use 128K. API
+            readers remain stronger overall. Baseline implementations are
+            detailed in Appendix C.
+          </p>
+        </div>
+      </section>
+
+      <section class="wrap section" id="analysis">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">A CLOSER LOOK</p>
+            <h2>Where the gains come from.</h2>
+          </div>
+          <div
+            class="analysis-tabs"
+            role="tablist"
+            aria-label="Analysis figures"
+          >
+            <button
+              id="error-tab"
+              role="tab"
+              aria-controls="error-panel"
+              aria-selected="true"
+              tabindex="0"
+            >
+              Error analysis</button
+            ><button
+              id="latency-tab"
+              role="tab"
+              aria-controls="latency-panel"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              Efficiency
+            </button>
+          </div>
+        </div>
+        <div id="error-panel" role="tabpanel" aria-labelledby="error-tab">
+          <figure>
+            <button
+              class="figure-button"
+              data-figure="images/error_analysis.png"
+              data-caption="Paired error analysis"
+              aria-label="Enlarge error analysis"
+            >
+              <img
+                src="images/error_analysis.png"
+                loading="lazy"
+                width="1473"
+                height="515"
+                alt="Paired outcomes across four benchmarks: both correct, fixed, regression, unresolved."
+              />
+            </button>
+            <figcaption>
+              Fixed: reader wrong, ClueWeaver correct. Regression: the
+              reverse.<br />Numbers are question counts; bar widths show
+              percentages.
+            </figcaption>
+          </figure>
+        </div>
+        <div
+          id="latency-panel"
+          role="tabpanel"
+          aria-labelledby="latency-tab"
+          hidden
+        >
+          <figure>
+            <button
+              class="figure-button"
+              data-figure="images/efficiency.png"
+              data-caption="Accuracy and per-question latency"
+              aria-label="Enlarge efficiency analysis"
+            >
+              <img
+                src="images/efficiency.png"
+                loading="lazy"
+                width="1473"
+                height="674"
+                alt="ClueWeaver accuracy and per-question latency, split into retrieval, Finder, and Interpreter stages."
+              />
+            </button>
+            <figcaption>
+              Qwen3-4B, single GPU, serial execution. ClueWeaver is shown per
+              benchmark; the end-to-end reader is averaged. Most additional
+              latency comes from the Finder.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="release-band">
+        <div class="wrap release">
+          <div>
+            <p class="eyebrow">OPEN RELEASE</p>
+            <h2>Explore ClueWeaver.</h2>
+            <p>
+              Core inference code, reward functions, and both agent checkpoints.
+            </p>
+          </div>
+          <div class="release-links">
+            <a href="https://github.com/Ameame1/ClueWeaver"
+              >Code &amp; quick start ↗</a
+            ><a href="https://huggingface.co/Ameame1002/ClueWeaver"
+              >Finder &amp; Interpreter weights ↗</a
+            ><a
+              href="https://github.com/Ameame1/ClueWeaver/blob/main/docs/reproducibility.md"
+              >Reproduction guide ↗</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="reading-width section" id="citation">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">REFERENCE</p>
+            <h2>BibTeX</h2>
+          </div>
+          <button class="copy-button" id="copy-citation" type="button">
+            Copy BibTeX
+          </button>
+        </div>
+        <pre><code id="bibtex">@misc{zhu2026clueweaver,
+  title={ClueWeaver: Reward-Guided Dual-Agent Evidence Reasoning for Compact LLMs on Literary Long Narratives},
+  author={Jihao Zhu and Zhiwei Yang and Wenxiao Zhang and Junqian Zhao and Qi You and Fangqi Wang and Zheyuan Deng and Hanzhe Yang and Yu Liu and Jin B. Hong},
+  year={2026},
+  eprint={2608.25531},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2608.25531}
+}</code></pre>
+        <p
+          id="copy-status"
+          class="copy-status"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </section>
+      <section class="reading-width acknowledgements">
+        <h2>Acknowledgements</h2>
+        <p>
+          This research is supported by the National Key R&amp;D Program of
+          China (No. 2023YFC3303800). We thank
+          <a href="https://wispaper.ai">WisPaper / QiewenPaper</a> for Academic
+          Agent support and GPU computational resources throughout the study.
+        </p>
+      </section>
+    </main>
+    <footer class="wrap">
+      <span>ClueWeaver · ICONIP 2026</span
+      ><span
+        >Project page layout inspired by
+        <a href="https://vgg-t.github.io/">VGGT</a>.</span
+      ><a href="#">Back to top ↑</a>
+    </footer>
+    <dialog id="figure-dialog" aria-labelledby="figure-title">
+      <div class="dialog-header">
+        <h2 id="figure-title">Figure</h2>
+        <button
+          type="button"
+          id="close-figure"
+          aria-label="Close figure"
+          title="Close figure"
+        >
+          ×
+        </button>
+      </div>
+      <div class="dialog-image"><img id="enlarged-figure" alt="" /></div>
+    </dialog>
+  </body>
+</html>
