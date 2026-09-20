@@ -20,10 +20,10 @@
     <meta name="theme-color" content="#17756a" />
     <title>ClueWeaver | ICONIP 2026</title>
     <link rel="stylesheet" href="site.css" />
-    <link rel="stylesheet" href="insight.css" />
+    <link rel="stylesheet" href="insight.css?v=storybook-7" />
     <script src="vendor/lucide.min.js" defer></script>
     <script src="site.js" defer></script>
-    <script src="insight.js" defer></script>
+    <script src="insight.js?v=storybook-7" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -125,10 +125,15 @@
         id="insight"
         aria-labelledby="insight-title"
       >
-        <p class="eyebrow">CORE INSIGHT</p>
         <div class="section-heading">
-          <h2 id="insight-title">A long story. A few decisive clues.</h2>
+          <div>
+            <p class="eyebrow">INSIDE CLUEWEAVER</p>
+            <h2 id="insight-title">
+              From scattered clues to a grounded answer.
+            </h2>
+          </div>
           <div class="insight-controls">
+            <span id="insight-counter">01 / 07</span>
             <button
               id="insight-play"
               type="button"
@@ -147,356 +152,158 @@
             </button>
           </div>
         </div>
-        <p class="insight-question">Who could unlock the attic?</p>
-        <div class="insight-scene" data-stage="0">
-          <svg
-            viewBox="0 0 1000 340"
+        <div class="claim-line">
+          <span>CLAIM TO VERIFY</span>
+          <p>“Leon could unlock the attic after Mara left.”</p>
+          <span class="claim-mode">TRUE / FALSE</span>
+        </div>
+        <div class="insight-scene" data-stage="0" data-playing="false">
+          <div
+            class="cast-art"
             role="img"
-            aria-labelledby="scene-title scene-description"
+            aria-label="A storybook, a teal robot detective called Finder, and a coral robot scholar called Interpreter"
           >
-            <title id="scene-title">
-              Finder and Interpreter connect scattered story clues
-            </title>
-            <desc id="scene-description">
-              A storybook contains distant paragraphs. A Finder with a
-              magnifying glass selects three clues and passes them to an
-              Interpreter, who connects them to answer Leon.
-            </desc>
-            <defs>
-              <pattern
-                id="paper-lines"
-                width="95"
-                height="25"
-                patternUnits="userSpaceOnUse"
-              >
-                <path
-                  d="M5 12h75"
-                  stroke="#d8dfdc"
-                  stroke-width="5"
-                  stroke-linecap="round"
-                />
-              </pattern>
-            </defs>
-            <path d="M40 293H960" stroke="#e5eae7" stroke-width="2" />
-            <g class="story-book">
-              <path
-                d="M45 80Q112 57 180 84Q246 57 308 80V273Q243 252 180 277Q110 252 45 273Z"
-                fill="#fff"
-                stroke="#38564f"
-                stroke-width="5"
-                stroke-linejoin="round"
-              />
-              <path d="M180 86V266" stroke="#c5d3cc" stroke-width="3" />
-              <path
-                d="M34 90V286Q110 270 180 288Q243 269 319 286V90"
-                fill="none"
-                stroke="#17756a"
-                stroke-width="7"
-                stroke-linecap="round"
-              />
-              <rect
-                x="58"
-                y="97"
-                width="105"
-                height="144"
-                fill="url(#paper-lines)"
-              />
-              <rect
-                x="198"
-                y="97"
-                width="98"
-                height="144"
-                fill="url(#paper-lines)"
-              />
-              <g class="clue clue-a">
-                <rect
-                  x="57"
-                  y="113"
-                  width="104"
-                  height="29"
-                  rx="5"
-                  fill="#e8c162"
-                />
-                <text x="109" y="133" text-anchor="middle">[12] The lock</text>
-              </g>
-              <g class="clue clue-b">
-                <rect
-                  x="197"
-                  y="163"
-                  width="103"
-                  height="29"
-                  rx="5"
-                  fill="#8ac5b4"
-                />
-                <text x="248" y="183" text-anchor="middle">[87] The key</text>
-              </g>
-              <g class="clue clue-c">
-                <rect
-                  x="58"
-                  y="213"
-                  width="103"
-                  height="29"
-                  rx="5"
-                  fill="#eca797"
-                />
-                <text x="109" y="233" text-anchor="middle">[203] Leon</text>
-              </g>
-              <text x="175" y="323" text-anchor="middle" class="scene-label">
-                A long narrative
-              </text>
-            </g>
-            <path
-              class="evidence-flow flow-one"
-              d="M313 169C344 142 365 146 387 169"
-              fill="none"
-              stroke="#17756a"
-              stroke-width="4"
-              stroke-dasharray="7 8"
+            <img
+              class="cast-piece cast-book"
+              src="images/insight-storybook-cast.png"
+              width="1536"
+              height="1024"
+              alt=""
             />
-            <g class="finder-character">
-              <path
-                d="M399 273L413 244H463L477 273"
-                fill="#7fbdab"
-                stroke="#38564f"
-                stroke-width="4"
-              />
-              <rect
-                x="391"
-                y="151"
-                width="98"
-                height="89"
-                rx="27"
-                fill="#e4f3ea"
-                stroke="#38564f"
-                stroke-width="4"
-              />
-              <path
-                d="M414 150L434 126L451 150"
-                fill="#e8c162"
-                stroke="#38564f"
-                stroke-width="4"
-                stroke-linejoin="round"
-              />
-              <g class="robot-eyes">
-                <circle cx="416" cy="187" r="6" fill="#38564f" />
-                <circle cx="458" cy="187" r="6" fill="#38564f" />
-              </g>
-              <path
-                d="M425 212Q438 223 451 212"
-                fill="none"
-                stroke="#38564f"
-                stroke-width="3"
-                stroke-linecap="round"
-              />
-              <g class="magnifier">
-                <circle
-                  cx="484"
-                  cy="205"
-                  r="26"
-                  fill="#d9edf1"
-                  fill-opacity=".8"
-                  stroke="#38564f"
-                  stroke-width="5"
-                />
-                <path
-                  d="M501 226L516 245"
-                  stroke="#b65b46"
-                  stroke-width="10"
-                  stroke-linecap="round"
-                />
-              </g>
-              <text x="442" y="323" text-anchor="middle" class="scene-label">
-                Finder
-              </text>
-              <g class="finder-bubble">
-                <rect
-                  x="372"
-                  y="77"
-                  width="143"
-                  height="43"
-                  rx="15"
-                  fill="#e9f3ed"
-                />
-                <text x="443" y="104" text-anchor="middle">
-                  Keep the clues!
-                </text>
-              </g>
-            </g>
-            <path
-              class="evidence-flow flow-two"
-              d="M526 180H573"
-              fill="none"
-              stroke="#17756a"
-              stroke-width="4"
-              stroke-dasharray="7 8"
+            <img
+              class="cast-piece cast-finder"
+              src="images/insight-storybook-cast.png"
+              width="1536"
+              height="1024"
+              alt=""
             />
-            <g class="evidence-packet">
-              <g class="packet-one">
-                <rect
-                  x="579"
-                  y="116"
-                  width="128"
-                  height="35"
-                  rx="5"
-                  fill="#e8c162"
-                />
-                <text x="643" y="139" text-anchor="middle">[12] Brass key</text>
-              </g>
-              <g class="packet-two">
-                <rect
-                  x="579"
-                  y="164"
-                  width="128"
-                  height="35"
-                  rx="5"
-                  fill="#8ac5b4"
-                />
-                <text x="643" y="187" text-anchor="middle">
-                  [87] Given to Leon
-                </text>
-              </g>
-              <g class="packet-three">
-                <rect
-                  x="579"
-                  y="212"
-                  width="128"
-                  height="35"
-                  rx="5"
-                  fill="#eca797"
-                />
-                <text x="643" y="235" text-anchor="middle">
-                  [203] Still with him
-                </text>
-              </g>
-              <path
-                class="weave"
-                d="M594 151Q673 158 594 164M594 199Q673 207 594 212"
-                fill="none"
-                stroke="#38564f"
-                stroke-width="3"
-              />
-              <text x="642" y="323" text-anchor="middle" class="scene-label">
-                Ordered evidence
-              </text>
-            </g>
-            <path
-              class="evidence-flow flow-three"
-              d="M718 180H765"
-              fill="none"
-              stroke="#b65b46"
-              stroke-width="4"
-              stroke-dasharray="7 8"
+            <img
+              class="cast-piece cast-interpreter"
+              src="images/insight-storybook-cast.png"
+              width="1536"
+              height="1024"
+              alt=""
             />
-            <g class="interpreter-character">
-              <path
-                d="M794 273L808 244H858L872 273"
-                fill="#d79786"
-                stroke="#38564f"
-                stroke-width="4"
-              />
-              <rect
-                x="785"
-                y="151"
-                width="100"
-                height="89"
-                rx="27"
-                fill="#fae8df"
-                stroke="#38564f"
-                stroke-width="4"
-              />
-              <path d="M835 150V134" stroke="#38564f" stroke-width="4" />
-              <circle
-                cx="835"
-                cy="129"
-                r="8"
-                fill="#e8c162"
-                stroke="#38564f"
-                stroke-width="3"
-              />
-              <g class="robot-eyes">
-                <circle cx="812" cy="187" r="6" fill="#38564f" />
-                <circle cx="859" cy="187" r="6" fill="#38564f" />
-              </g>
-              <path
-                d="M800 177H825V198H800ZM847 177H872V198H847ZM825 184H847"
-                fill="none"
-                stroke="#38564f"
-                stroke-width="3"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M821 214Q835 224 849 214"
-                fill="none"
-                stroke="#38564f"
-                stroke-width="3"
-                stroke-linecap="round"
-              />
-              <text x="835" y="323" text-anchor="middle" class="scene-label">
-                Interpreter
-              </text>
-              <g class="answer-bubble">
-                <path
-                  d="M778 59H941Q954 59 954 73V110Q954 123 941 123H854L839 141V123H778Q766 123 766 110V73Q766 59 778 59Z"
-                  fill="#e9f3ed"
-                  stroke="#17756a"
-                  stroke-width="2"
-                />
-                <text x="860" y="86" text-anchor="middle" class="answer-name">
-                  Leon.
-                </text>
-                <text x="860" y="108" text-anchor="middle">
-                  [12] [87] [203]
-                </text>
-              </g>
-            </g>
-          </svg>
+            <span class="flying-clue flying-a">[12]</span
+            ><span class="flying-clue flying-b">[87]</span
+            ><span class="flying-clue flying-c">[203]</span>
+            <span class="cast-stamp" id="cast-stamp">A whole story</span>
+          </div>
+          <div class="cast-labels">
+            <div>
+              <strong>The narrative</strong
+              ><span>Paragraph-indexed source</span>
+            </div>
+            <div><strong>Finder</strong><span>Evidence selection</span></div>
+            <div>
+              <strong>Interpreter</strong><span>Grounded reasoning</span>
+            </div>
+          </div>
+          <div
+            class="insight-timeline"
+            role="group"
+            aria-label="Animation stages"
+          >
+            <button data-insight-stage="0" aria-pressed="true">
+              <span class="step-number">01</span><span>Input</span>
+            </button>
+            <button data-insight-stage="1" aria-pressed="false">
+              <span class="step-number">02</span><span>Retrieve</span>
+            </button>
+            <button data-insight-stage="2" aria-pressed="false">
+              <span class="step-number">03</span><span>Select</span>
+            </button>
+            <button data-insight-stage="3" aria-pressed="false">
+              <span class="step-number">04</span><span>Pack</span>
+            </button>
+            <button data-insight-stage="4" aria-pressed="false">
+              <span class="step-number">05</span><span>Reason</span>
+            </button>
+            <button data-insight-stage="5" aria-pressed="false">
+              <span class="step-number">06</span><span>Self-check</span>
+            </button>
+            <button data-insight-stage="6" aria-pressed="false">
+              <span class="step-number">07</span><span>Answer</span>
+            </button>
+          </div>
+          <div class="insight-explanation">
+            <span class="operation-tag" id="insight-operation">INPUT</span>
+            <h3 id="insight-stage-title">
+              One claim. Clues hundreds of paragraphs apart.
+            </h3>
+            <p id="insight-stage-description">
+              The answer depends on the lock, the key changing hands, and who
+              still has it later.
+            </p>
+          </div>
+          <div class="evidence-workspace">
+            <div class="source-narrative">
+              <div class="work-heading">
+                <h4>Story paragraphs</h4>
+                <span>Selected excerpts</span>
+              </div>
+              <ol class="source-lines">
+                <li data-paragraph="12">
+                  <span class="paragraph-id">[12]</span>
+                  <p>Only the brass key could unlock the attic.</p>
+                  <span class="source-state"></span>
+                </li>
+                <li data-paragraph="41">
+                  <span class="paragraph-id">[41]</span>
+                  <p>Rain drummed against the windows all evening.</p>
+                  <span class="source-state"></span>
+                </li>
+                <li data-paragraph="86">
+                  <span class="paragraph-id">[86]</span>
+                  <p>Mara was leaving for the harbor that evening.</p>
+                  <span class="source-state"></span>
+                </li>
+                <li data-paragraph="87">
+                  <span class="paragraph-id">[87]</span>
+                  <p>Before she left, Mara handed the brass key to Leon.</p>
+                  <span class="source-state"></span>
+                </li>
+                <li data-paragraph="88">
+                  <span class="paragraph-id">[88]</span>
+                  <p>He put it inside his coat pocket.</p>
+                  <span class="source-state"></span>
+                </li>
+                <li data-paragraph="203">
+                  <span class="paragraph-id">[203]</span>
+                  <p>
+                    Hours after Mara left, Leon still carried the brass key.
+                  </p>
+                  <span class="source-state"></span>
+                </li>
+              </ol>
+              <div class="source-legend">
+                <span
+                  ><i class="legend-dot clue-dot"></i>Answer-critical clue</span
+                ><span
+                  ><i class="legend-dot context-dot"></i>Nearby context</span
+                ><span><i class="legend-dot drop-dot"></i>Discarded</span>
+              </div>
+            </div>
+            <div class="operation-output">
+              <div class="work-heading">
+                <h4 id="output-title">Input to the pipeline</h4>
+                <span id="output-meta">Narrative + claim</span>
+              </div>
+              <div id="operation-content">
+                <p>
+                  The source narrative and claim enter the pipeline together.
+                  Ground-truth labels are not part of the input.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div
-          class="insight-timeline"
-          role="group"
-          aria-label="Animation stages"
-        >
-          <button data-insight-stage="0" aria-pressed="true">
-            01 <span>Scattered clues</span>
-          </button>
-          <button data-insight-stage="1" aria-pressed="false">
-            02 <span>Find evidence</span>
-          </button>
-          <button data-insight-stage="2" aria-pressed="false">
-            03 <span>Connect clues</span>
-          </button>
-          <button data-insight-stage="3" aria-pressed="false">
-            04 <span>Ground the answer</span>
-          </button>
-        </div>
-        <div class="insight-explanation">
-          <h3 id="insight-stage-title">
-            The answer is spread across the story.
-          </h3>
-          <p id="insight-stage-description">
-            The attic lock, a key changing hands, and a detail hundreds of
-            paragraphs later all matter.
-          </p>
-        </div>
-        <details class="insight-evidence">
-          <summary>Story evidence</summary>
-          <ol>
-            <li>
-              <strong>[12]</strong> Only the brass key could unlock the attic.
-            </li>
-            <li>
-              <strong>[87]</strong> Mara handed the brass key to Leon before
-              leaving.
-            </li>
-            <li>
-              <strong>[203]</strong> Leon still had the brass key in his pocket.
-            </li>
-          </ol>
-        </details>
         <p class="insight-disclaimer">
-          Illustrative fictional example, not a model inference or benchmark
-          result. The animation isolates evidence selection and grounding;
-          training and conditional self-calibration are described below.
+          Fictional, scripted illustration of inference, not a live model run or
+          benchmark result. Candidate windows, relevance decisions and the
+          900-character evidence budget are illustrative. Both agents are
+          trained separately with GRPO; self-calibration reuses the Interpreter
+          and the same evidence packet.
         </p>
       </section>
 
