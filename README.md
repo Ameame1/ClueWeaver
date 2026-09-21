@@ -31,7 +31,7 @@ The **Finder** selects clue-bearing passages from retrieval-guided segments. The
 1. **Retrieval-guided segmentation.** Dense retrieval with BGE-M3 and lexical matching identify candidate passages while preserving paragraph IDs and surrounding context.
 2. **Finder: evidence selection and rationale generation.** Each segment receives a YES/NO clue decision and a short rationale with supporting paragraph references.
 3. **Evidence packing.** Selected evidence is compacted and ordered by its position in the narrative.
-4. **Interpreter: evidence-grounded interpretation.** The Interpreter predicts the answer from the evidence packet. For binary claims and high-risk question forms, it can re-check its provisional answer against the same evidence.
+4. **Interpreter: evidence-grounded interpretation.** The Interpreter predicts the answer from the evidence packet. For binary claims and high-risk question forms, it can re-check its provisional answer against the same evidence. 
 
 The Finder reward emphasizes evidence retention and faithful paragraph references. The Interpreter reward emphasizes answer correctness, grounding, and concise explanations. See Sections 3.4-3.5 and Appendix A of the [paper](https://arxiv.org/abs/2608.25531).
 
