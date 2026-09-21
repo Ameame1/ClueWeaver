@@ -202,7 +202,7 @@ This research is supported by the National Key R&D Program of China (No. 2023YFC
 ```bibtex
 @misc{zhu2026clueweaver,
   title={ClueWeaver: Reward-Guided Dual-Agent Evidence Reasoning for Compact LLMs on Literary Long Narratives},
-  author={Jihao Zhu and Zhiwei Yang and Wenxiao Zhang and Junqian Zhao and Qi You and Fangqi Wang and Zheyuan Deng and Hanzhe Yang and Yu Liu and Jin B. Hong},
+  author={Jihao Zhu and Zhiwei Yang and Wenxiao Zhang and Fangqi Wang and Qi You and Junqian Zhao and Zheyuan Deng and Hanzhe Yang and Yu Liu and Jin B. Hong},
   year={2026},
   eprint={2608.25531},
   archivePrefix={arXiv},
